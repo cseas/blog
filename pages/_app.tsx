@@ -1,3 +1,4 @@
+import "hazel-ui/dist/styles.css";
 import { AppProps } from "next/app";
 import "../src/styles/globals.css";
 

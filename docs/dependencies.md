@@ -20,5 +20,6 @@ This document explains the purpose of the dependencies used in the project. Any 
 | @types/node  | Required by react |
 | @types/react | Required by react |
 | typescript   | Language support  |
+| hazel-ui     | UI library        |
 
 [1]: https://styled-components.com/docs/advanced#nextjs
