@@ -6,4 +6,8 @@ My upcoming blog, currently WIP
 
 - [ ] Add prettier config
 - [ ] Add jest
-- [ ] Add CI
+- [ ] Add CI build and test checks
+- [ ] Add dependabot
+- [ ] Add CD
+- Hazel UI
+  - [ ] Change Layout to Box
