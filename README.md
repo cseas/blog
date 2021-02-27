@@ -9,5 +9,3 @@ My upcoming blog, currently WIP
 - [ ] Add CI build and test checks
 - [ ] Add dependabot
 - [ ] Add CD
-- Hazel UI
-  - [ ] Change Layout to Box

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html,
@@ -25,4 +26,25 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+p {
+  padding: 1rem 0 0;
+}
+
+ul {
+  padding-top: 1rem;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #8a2be2;
 }

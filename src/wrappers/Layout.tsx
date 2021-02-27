@@ -10,7 +10,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Navbar />
-      <Box maxWidth="36rem" padding="3rem 1rem 6rem" margin="0 auto">
+      <Box maxWidth="50rem" padding="3rem 1rem 6rem" margin="0 auto">
         {children}
       </Box>
     </>
