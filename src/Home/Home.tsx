@@ -1,6 +1,5 @@
 import { Box, Typography } from "hazel-ui";
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 import { config } from "../config";
 import type { Post } from "../lib";
@@ -10,7 +9,7 @@ import { About, Posts } from "./components";
 const page = {
   title: config.name,
   description: config.description,
-  image: config.photo,
+  image: config.basePath + config.photo,
   imageAlt: `Headshot of ${config.name}`,
   twitter: config.twitter,
 };
@@ -37,12 +36,12 @@ export function Home({ allPostsData }: HomeProps) {
       </Head>
       <Layout>
         <Header>
-          <ProfileImage
-            priority
-            src="/images/profile.jpg"
+          <img
+            src={config.basePath + config.photo}
             height={144}
             width={144}
             alt={page.title}
+            style={{ borderRadius: "72px" }}
           />
 
           <Box padding="1rem 0">
@@ -62,8 +61,4 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const ProfileImage = styled(Image)`
-  border-radius: 72px;
 `;

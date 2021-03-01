@@ -11,9 +11,7 @@ interface PostsProps {
 export function Posts({ allPostsData }: PostsProps) {
   return (
     <section style={{ paddingTop: "3rem" }}>
-      <Typography variant="h2" textAlign="center">
-        Recent Posts
-      </Typography>
+      <RecentPosts variant="h2">Recent Posts</RecentPosts>
       <List>
         {allPostsData.map(({ id, date, title }) => (
           <ListItem key={id}>
@@ -50,4 +48,8 @@ const ListItem = styled.li`
 
 const PostTitle = styled(Typography)`
   color: #008256;
+`;
+
+const RecentPosts = styled(Typography)`
+  text-align: center;
 `;

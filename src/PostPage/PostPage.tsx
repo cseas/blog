@@ -23,9 +23,8 @@ export function PostPage({ postData }: PostPageProps) {
           </Typography>
 
           <br />
-          <Typography variant="p">
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-          </Typography>
+
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </Layout>
     </>

@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { config } from "../src";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -38,7 +39,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href={`${config.basePath}/favicon.ico`} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@cse_as" />
         </Head>

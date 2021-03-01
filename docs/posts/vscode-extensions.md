@@ -3,6 +3,10 @@ title: "VSCode extensions I use as a Frontend Developer"
 date: "2021-02-19"
 ---
 
+# Index
+
+# Auto Rename Tag
+
 ## Bracket Pair Colorizer
 
 Colorful bracket pairs.
