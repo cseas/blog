@@ -15,14 +15,15 @@ This document explains the purpose of the dependencies used in the project. Any 
 
 ## Dev Dependencies
 
-| Package name | Purpose                 |
-| ------------ | ----------------------- |
-| @types/node  | Required by react       |
-| @types/react | Required by react       |
-| date-fns     | Date formatting         |
-| typescript   | Language support        |
-| hazel-ui     | UI library              |
-| remark       | Render markdown content |
-| remark-html  | Middleware for remark   |
+| Package name             | Purpose                     |
+| ------------------------ | --------------------------- |
+| @types/node              | Required by react           |
+| @types/react             | Required by react           |
+| date-fns                 | Date formatting             |
+| typescript               | Language support            |
+| hazel-ui                 | UI library                  |
+| next-mdx-remote          | Process mdx files           |
+| rehype-slug              | Add IDs to headings         |
+| rehype-autolink-headings | Add anchor tags to headings |
 
 [1]: https://styled-components.com/docs/advanced#nextjs

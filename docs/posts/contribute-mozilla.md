@@ -8,7 +8,7 @@ As a [Mozilla Rep][1], I get this question often, specially from students.
 The best way to get in touch with the Mozilla developer community is through the [official chat channels][7]. Here are some to get started:
 
 - [Firefox Desktop][2]
-- [Firefox android][3]
+- [Firefox Android][3]
 
 If you'd like to volunteer for Mozilla initiatives or get in touch with local Mozillians, the community is active on Telegram:
 
@@ -18,7 +18,7 @@ If you'd like to volunteer for Mozilla initiatives or get in touch with local Mo
 
 You can discuss topics related to the [Mozilla Mission][8] or ask for help in the above groups to reach out to local Mozillians. They can help you organize events and possibly ship some goodies to your college if you're organizing an event for one of the Mozilla [Campaigns][9] or [Activities][10].
 
-You can also ask for speakers in the group if you'd like to have a professional deliver a session in your campus.
+You can also ask for speakers in the relevant local group if you'd like to have a professional deliver a session in your campus.
 
 Please reach out to the respective channels relevant to you for more guidance regarding contributing or volunteering. I personally hang around the Mozilla Karnataka Telegram.
 

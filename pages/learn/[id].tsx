@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getAllPostIds, getPostData } from "../../src";
+import { getAllLearnIds, getLearnData } from "../../src/lib";
 
-export { PostPage as default } from "../../src";
+export { LearnPage as default } from "../../src";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
+  const paths = getAllLearnIds();
   return {
     paths,
     fallback: false,
@@ -12,7 +12,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { frontMatter, mdxSource } = await getPostData(params.id as string);
+  const { frontMatter, mdxSource } = await getLearnData(params.id as string);
   return {
     props: {
       frontMatter,

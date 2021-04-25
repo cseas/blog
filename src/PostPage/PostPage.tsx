@@ -3,28 +3,26 @@ import Head from "next/head";
 import type { Post } from "../lib";
 import { Date } from "../ui";
 import { Layout } from "../wrappers";
+import hydrate from "next-mdx-remote/hydrate";
 
-interface PostPageProps {
-  postData: Post;
-}
-
-export function PostPage({ postData }: PostPageProps) {
+export function PostPage({ frontMatter, mdxSource }: Post) {
+  const content = hydrate(mdxSource);
   return (
     <>
       <Head>
-        <title>{postData.title}</title>
+        <title>{frontMatter.title}</title>
       </Head>
       <Layout>
         <article>
-          <Typography variant="h1">{postData.title}</Typography>
+          <Typography variant="h1">{frontMatter.title}</Typography>
 
           <Typography variant="p">
-            <Date dateString={postData.date} />
+            <Date dateString={frontMatter.date} />
           </Typography>
 
           <br />
 
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div>{content}</div>
         </article>
       </Layout>
     </>

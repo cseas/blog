@@ -1,3 +1,7 @@
+:root {
+  --color-gray-100: #d1d5db;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,4 +51,18 @@ a:hover {
 
 a:visited {
   color: #8a2be2;
+}
+
+/* Scroll # links only till navbar */
+:target:before {
+  content: "";
+  display: block;
+  height: 50px;
+  margin-top: -50px;
+}
+
+.icon::after {
+  margin-right: 0.4rem;
+  color: var(--color-gray-100);
+  content: "#";
 }
