@@ -1,28 +1,34 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import remark from "remark";
-import html from "remark-html";
+import renderToString from "next-mdx-remote/render-to-string";
+import slug from "rehype-slug";
+import link from "rehype-autolink-headings";
+import type { MdxRemote } from "next-mdx-remote/types";
+
+const POSTS_DIRECTORY = path.join(process.cwd(), "docs/posts");
+
+interface FrontMatter {
+  date: string;
+  title: string;
+}
 
 export interface Post {
   id: string;
-  date: string;
-  title: string;
-  contentHtml?: string;
+  frontMatter: FrontMatter;
+  mdxSource?: MdxRemote.Source;
 }
 
-const postsDirectory = path.join(process.cwd(), "docs/posts");
-
-export function getSortedPostsData() {
+export function getSortedPostsData(): Array<Post> {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(POSTS_DIRECTORY);
 
   const allPostsData = fileNames.map((fileName) => {
     // Remove .md from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
     // Read markdown file as string
-    const fullFilePath = path.join(postsDirectory, fileName);
+    const fullFilePath = path.join(POSTS_DIRECTORY, fileName);
     const fileContents = fs.readFileSync(fullFilePath, "utf8");
 
     // use gray-matter to parse the post metadata section
@@ -31,13 +37,13 @@ export function getSortedPostsData() {
     // combine the data with the id
     return {
       id,
-      ...matterResult.data,
+      frontMatter: matterResult.data,
     } as Post;
   });
 
   // sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (a.frontMatter.date < b.frontMatter.date) {
       return 1;
     } else {
       return -1;
@@ -46,7 +52,7 @@ export function getSortedPostsData() {
 }
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(POSTS_DIRECTORY);
 
   return fileNames.map((fileName) => {
     return {
@@ -58,21 +64,19 @@ export function getAllPostIds() {
 }
 
 export async function getPostData(id: string) {
-  const fullFilePath = path.join(postsDirectory, `${id}.md`);
+  const fullFilePath = path.join(POSTS_DIRECTORY, `${id}.md`);
   const fileContents = fs.readFileSync(fullFilePath, "utf8");
 
   // use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  // use remark to convert markdown to html string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const mdxSource = await renderToString(matterResult.content, {
+    mdxOptions: { rehypePlugins: [slug, link] },
+  });
 
   return {
     id,
-    contentHtml,
-    ...matterResult.data,
+    mdxSource,
+    frontMatter: matterResult.data,
   } as Post;
 }

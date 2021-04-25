@@ -13,16 +13,16 @@ export function Posts({ allPostsData }: PostsProps) {
     <section style={{ paddingTop: "3rem" }}>
       <RecentPosts variant="h2">Recent Posts</RecentPosts>
       <List>
-        {allPostsData.map(({ id, date, title }) => (
+        {allPostsData.map(({ id, frontMatter }) => (
           <ListItem key={id}>
             <PostTitle variant="h4">
               <Link href={`/posts/${id}`} passHref>
-                <Anchor color="#008256">{title}</Anchor>
+                <Anchor color="#008256">{frontMatter.title}</Anchor>
               </Link>
             </PostTitle>
 
             <Typography>
-              <Date dateString={date} />
+              <Date dateString={frontMatter.date} />
             </Typography>
           </ListItem>
         ))}
