@@ -5,6 +5,7 @@ import { Layout } from "../wrappers";
 import styled from "styled-components";
 import Link from "next/link";
 import { Date } from "../ui";
+import type { Post } from "../lib/posts";
 
 const page = {
   title: config.name + " | All Posts",
