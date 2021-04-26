@@ -1,3 +1,8 @@
+---
+title: ".NET"
+date: "2021-04-25"
+---
+
 SOLID principles
 
 Logging
