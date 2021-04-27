@@ -2,8 +2,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import renderToString from "next-mdx-remote/render-to-string";
+import codeTitle from "remark-code-titles";
 import slug from "rehype-slug";
 import link from "rehype-autolink-headings";
+import rehypePrism from "@mapbox/rehype-prism";
 import type { MdxRemote } from "next-mdx-remote/types";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "docs/posts");
@@ -71,7 +73,10 @@ export async function getPostData(id: string) {
   const matterResult = matter(fileContents);
 
   const mdxSource = await renderToString(matterResult.content, {
-    mdxOptions: { rehypePlugins: [slug, link] },
+    mdxOptions: {
+      remarkPlugins: [codeTitle],
+      rehypePlugins: [slug, link, rehypePrism],
+    },
   });
 
   return {

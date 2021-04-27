@@ -1,3 +1,3 @@
 export function LearnPage(): JSX.Element {
-  return <></>;
+  return <>Learn | .NET</>;
 }
