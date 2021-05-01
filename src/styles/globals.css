@@ -66,3 +66,9 @@ a:visited {
   color: var(--color-gray-100);
   content: "#";
 }
+
+pre {
+  background-color: rgba(249, 250, 251, 1);
+  border-width: 1px;
+  border-color: rgba(229, 231, 235, 1);
+}
