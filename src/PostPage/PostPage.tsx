@@ -22,7 +22,9 @@ export function PostPage({ frontMatter, mdxSource }: Post) {
 
           <br />
 
-          <div>{content}</div>
+          <div className="prose dark:prose-dark max-w-none w-full">
+            {content}
+          </div>
         </article>
       </Layout>
     </>
