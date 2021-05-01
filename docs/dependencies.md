@@ -27,5 +27,10 @@ This document explains the purpose of the dependencies used in the project. Any 
 | rehype-autolink-headings | Add anchor tags to headings        |
 | @mapbox/rehype-prism     | Syntax highlighting mdx codeblocks |
 | remark-code-titles       | Add filenames to codeblocks        |
+| tailwindcss              | [Tailwind CSS][2]                  |
+| postcss                  | Tailwind CSS                       |
+| autoprefixer             | Tailwind CSS                       |
+| @tailwindcss/typography  | Tailwind CSS                       |
 
 [1]: https://styled-components.com/docs/advanced#nextjs
+[2]: https://tailwindcss.com/docs/guides/nextjs
