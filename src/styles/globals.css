@@ -36,9 +36,10 @@ img {
   display: block;
 }
 
-p {
+/* Add back when removing tailwind */
+/* p {
   padding: 1rem 0 0;
-}
+} */
 
 ul {
   padding-top: 1rem;
@@ -72,6 +73,7 @@ a:visited {
 }
 
 /* tailwind styles for code snippets */
+/* see comments above in the file when removing tailwind */
 
 .prose pre {
   @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
