@@ -5,7 +5,7 @@ interface AboutProps {}
 
 export function About(props: AboutProps) {
   return (
-    <section>
+    <Section>
       <Typography variant="p">
         Hello, I'm <strong>Abhijeet</strong>. I'm a software engineer at{" "}
         <AnimatedLink
@@ -51,7 +51,7 @@ export function About(props: AboutProps) {
         </AnimatedLink>
         . This is my personal blog where I share things I've learned.
       </Typography>
-    </section>
+    </Section>
   );
 }
 
@@ -61,5 +61,12 @@ const AnimatedLink = styled(Anchor)`
 
   &:hover {
     transform: translate3d(0, -2px, 0);
+  }
+`;
+
+const Section = styled.section`
+  /* remove when removing tailwind */
+  p {
+    padding: 1rem 0 0;
   }
 `;
