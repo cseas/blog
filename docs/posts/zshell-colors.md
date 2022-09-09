@@ -12,7 +12,7 @@ As someone who has enjoyed the bash terminal on Ubuntu for years as a student, t
 
 Here's how to paint some colors on that terminal prompt to make it look similar to the bash terminal on Ubuntu. Create a `.zshrc` file with the following code in the Home directory of your system:
 
-```sh
+```bash
 PROMPT='%F{green}%n%f:%F{cyan}%2~%f$ '
 ```
 
