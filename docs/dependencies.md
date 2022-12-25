@@ -4,12 +4,11 @@ This document explains the purpose of the dependencies used in the project. Any 
 
 ## Dependencies
 
-| Package name      | Purpose                      |
-| ----------------- | ---------------------------- |
-| next              | Server rendering             |
-| react             | Server rendering             |
-| react-dom         | Server rendering             |
-| styled-components | [Server render css in js][1] |
+| Package name | Purpose          |
+| ------------ | ---------------- |
+| next         | Server rendering |
+| react        | Server rendering |
+| react-dom    | Server rendering |
 
 []()
 
@@ -32,5 +31,4 @@ This document explains the purpose of the dependencies used in the project. Any 
 | autoprefixer             | Tailwind CSS                       |
 | @tailwindcss/typography  | Tailwind CSS                       |
 
-[1]: https://styled-components.com/docs/advanced#nextjs
 [2]: https://tailwindcss.com/docs/guides/nextjs

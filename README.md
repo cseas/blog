@@ -1,8 +1,8 @@
 # Personal blog
 
-My upcoming blog, currently WIP
+Code for my personal blog, hosted at [blog.absingh.com][1].
 
-# Todo
+### Todo
 
 - [ ] Add prettier config
 - [ ] Add jest
@@ -10,9 +10,11 @@ My upcoming blog, currently WIP
 - [ ] Add dependabot
 - [ ] Add CD
 
-## Runtime software versions
+### Runtime software versions
 
 | Name | Version  |
 | ---- | -------- |
 | node | v16.14.2 |
 | npm  | 8.5.0    |
+
+[1]: https://blog.absingh.com/

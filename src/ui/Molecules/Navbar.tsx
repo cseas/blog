@@ -6,7 +6,7 @@ interface NavbarProps {}
 
 export function Navbar(props: NavbarProps) {
   return (
-    <Container>
+    <div className="sticky top-0 z-10 shadow backdrop-blur-md">
       <Box
         display="flex"
         justifyContent="space-between"
@@ -30,21 +30,9 @@ export function Navbar(props: NavbarProps) {
           <Label>Links</Label>
         </Link>
       </Box>
-    </Container>
+    </div>
   );
 }
-
-const Container = styled.div`
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  background: rgba(230, 230, 250, 0.3);
-  box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-`;
 
 const Label = styled.a`
   color: #4b4b4b;

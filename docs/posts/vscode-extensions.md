@@ -7,24 +7,26 @@ I've used many editors and IDEs: Notepad++, Gedit, Vim, Sublime Text, Atom, Ecli
 
 Here are the must-have extensions I always install in a new setup for a frontend project.
 
-1. [Apollo GraphQL - Apollo GraphQL][9]: Syntax highlighting for GraphQL with Apollo Server.
 1. [Auto Rename Tag - Jun Han][1]: Auto rename paired HTML/XML tag.
 1. [Better Comments][8]: Highlighting for different types of comments.
-1. [Bracket Pair Colorizer 2 - CoenraadS][2]: Colorize matching brackets.
-1. [GitLens - Eric Amodio][3]: Visualize code authorship at a glance.
 1. [ESLint - Dirk Baeumer][7]: Integrates ESLint into VSCode.
+1. [Fig - withfig][2]: Companion extension for Fig.
+1. [GitLens - Eric Amodio][3]: Visualize code authorship at a glance.
+1. [GraphQL - Orsen Kucher][9]: Adds syntax highlighting and language features for graphql projects.
 1. [Jest - Orta][4]: Wallaby.js alternative to help debug jest tests in VSCode.
 1. [MDX - Matija Marohnić][10]: Syntax highlighting for MDX (JSX in Markdown) files.
 1. [Prettier - Prettier][5]: Opinionated code formatter.
-1. [vscode-styled-components - Julien Poissonnier][6]: Syntax highlighting for styled-components.
+1. [Tailwind CSS IntelliSense - Tailwind Labs][6]: Intelligent Tailwind CSS tooling for VS Code.
+1. [WakaTime - WakaTime][11]: Metrics, insights, and time tracking for your programming activity.
 
 [1]: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
-[2]: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+[2]: https://fig.io/docs/support/vscode-integration
 [3]: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 [4]: https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
 [5]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-[6]: https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
+[6]: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
 [7]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [8]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
-[9]: https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo
+[9]: https://marketplace.visualstudio.com/items?itemName=orsenkucher.vscode-graphql
 [10]: https://marketplace.visualstudio.com/items?itemName=silvenon.mdx
+[11]: https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime
