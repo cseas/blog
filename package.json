@@ -25,6 +25,8 @@
     "hazel-ui": "0.0.21",
     "next-mdx-remote": "^2.1.4",
     "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
     "rehype-autolink-headings": "^5.0.1",
     "rehype-slug": "^4.0.1",
     "remark-code-titles": "^0.1.1",

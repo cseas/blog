@@ -4,6 +4,11 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 ### Todo
 
+- [ ] Dark mode by default
+- [ ] Add toggle for dark mode
+- [ ] Check if you need postcss
+- [ ] Remove theme from tailwind config
+- [ ] Add a lib for remark/rehype syntax highlighting
 - [ ] Add prettier config
 - [ ] Add jest
 - [ ] Add CI build and test checks
