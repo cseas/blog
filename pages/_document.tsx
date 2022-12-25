@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@cse_as" />
         </Head>
-        <body>
+        <body className="dark">
           <Main />
           <NextScript />
         </body>
