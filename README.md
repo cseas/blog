@@ -9,3 +9,10 @@ My upcoming blog, currently WIP
 - [ ] Add CI build and test checks
 - [ ] Add dependabot
 - [ ] Add CD
+
+## Runtime software versions
+
+| Name | Version  |
+| ---- | -------- |
+| node | v16.14.2 |
+| npm  | 8.5.0    |
