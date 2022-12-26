@@ -1,19 +1,10 @@
-import { Box } from "hazel-ui";
 import Link from "next/link";
-import styled from "styled-components";
+import { HTMLProps } from "react";
 
-interface NavbarProps {}
-
-export function Navbar(props: NavbarProps) {
+export function Navbar() {
   return (
-    <Container>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        maxWidth="36rem"
-        margin="0 auto 0"
-        padding="0.6rem 1.2rem"
-      >
+    <div className="sticky top-0 z-10 border-b border-mauve-7 bg-slate-50/75 backdrop-blur-xl backdrop-saturate-150 dark:bg-slate-900/75">
+      <div className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
         <Link href="/" passHref>
           <Label>Home</Label>
         </Link>
@@ -29,29 +20,16 @@ export function Navbar(props: NavbarProps) {
         <Link href="/links" passHref>
           <Label>Links</Label>
         </Link>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 }
 
-const Container = styled.div`
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  background: rgba(230, 230, 250, 0.3);
-  box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-`;
-
-const Label = styled.a`
-  color: #4b4b4b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: black;
-  }
-`;
+function Label(props: HTMLProps<HTMLAnchorElement>) {
+  return (
+    <a
+      className="text-mauve-11 transition-colors duration-150 visited:text-mauve-11 hover:text-purple-11 hover:no-underline"
+      {...props}
+    ></a>
+  );
+}

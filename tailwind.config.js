@@ -1,9 +1,22 @@
+const radixColors = require("@radix-ui/colors");
 const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("windy-radix-palette")({
+      colors: {
+        mauve: radixColors.mauve,
+        mauveDark: radixColors.mauveDark,
+        purple: radixColors.purple,
+        purpleDark: radixColors.purpleDark,
+      },
+    }),
+  ],
+  // TODO: revisit the config below this line
   theme: {
     extend: {
       colors: {
@@ -77,5 +90,4 @@ module.exports = {
   variants: {
     typography: ["dark"],
   },
-  plugins: [require("@tailwindcss/typography")],
 };
