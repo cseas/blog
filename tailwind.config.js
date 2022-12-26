@@ -11,8 +11,6 @@ module.exports = {
       colors: {
         mauve: radixColors.mauve,
         mauveDark: radixColors.mauveDark,
-        blackA: radixColors.blackA,
-        whiteA: radixColors.whiteA,
         purple: radixColors.purple,
         purpleDark: radixColors.purpleDark,
       },

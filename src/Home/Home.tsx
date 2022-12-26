@@ -1,6 +1,5 @@
 import { Box, Typography } from "hazel-ui";
 import Head from "next/head";
-import styled from "styled-components";
 import { config } from "../config";
 import type { Post } from "../lib";
 import { Layout } from "../wrappers";
@@ -34,8 +33,9 @@ export function Home({ allPostsData }: HomeProps) {
         <meta name="twitter:title" content={page.title} />
         <meta name="twitter:description" content={page.description} />
       </Head>
+
       <Layout>
-        <Header>
+        <header className="flex flex-col items-center">
           <img
             src={config.basePath + config.photo}
             height={144}
@@ -47,7 +47,7 @@ export function Home({ allPostsData }: HomeProps) {
           <Box padding="1rem 0">
             <Typography variant="h1">{page.title}</Typography>
           </Box>
-        </Header>
+        </header>
         <main>
           <About />
           <Posts allPostsData={allPostsData} />
@@ -56,9 +56,3 @@ export function Home({ allPostsData }: HomeProps) {
     </>
   );
 }
-
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
