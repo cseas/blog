@@ -4,6 +4,7 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 ### Todo
 
+- [ ] add bundle size analysis
 - [ ] Dark mode by default
 - [ ] Add toggle for dark mode
 - [ ] Check if you need postcss
