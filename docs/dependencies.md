@@ -16,12 +16,15 @@ This document explains the purpose of the dependencies used in the project. Any 
 
 | Package name                         | Purpose                                       |
 | ------------------------------------ | --------------------------------------------- |
+| @commitlint/cli                      | commit hooks                                  |
+| @commitlint/config-conventional      | config for commitlint                         |
 | @radix-ui/colors                     | Required by windy-radix-palette               |
 | @types/node                          | Required by react                             |
 | @types/react                         | Required by react                             |
 | date-fns                             | Date formatting                               |
 | typescript                           | Language support                              |
 | hazel-ui                             | UI library                                    |
+| husky                                | commit hooks                                  |
 | next-mdx-remote                      | Process mdx files                             |
 | rehype-slug                          | Add IDs to headings                           |
 | rehype-autolink-headings             | Add anchor tags to headings                   |
