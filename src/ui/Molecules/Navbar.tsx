@@ -13,6 +13,7 @@ export function Navbar() {
       <div className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
         {pages.map(({ href, label }) => (
           <Link
+            key={label}
             href={href}
             className="text-mauve-11 transition-colors duration-150 visited:text-mauve-11 hover:text-purple-11 hover:no-underline"
           >
