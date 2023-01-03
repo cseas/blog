@@ -14,7 +14,6 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 - [ ] Add jest
 - [ ] Add CI build and test checks
 - [ ] Add dependabot
-- [ ] Add CD
 
 ### Runtime software versions
 
