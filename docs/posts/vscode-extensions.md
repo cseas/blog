@@ -14,7 +14,7 @@ Here are the must-have extensions I always install in a new setup for a frontend
 1. [GitLens - Eric Amodio][3]: Visualize code authorship at a glance.
 1. [GraphQL - Orsen Kucher][9]: Adds syntax highlighting and language features for graphql projects.
 1. [Jest - Orta][4]: Wallaby.js alternative to help debug jest tests in VSCode.
-1. [MDX - Matija Marohnić][10]: Syntax highlighting for MDX (JSX in Markdown) files.
+1. [MDX - unified][10]: Language support for MDX.
 1. [Prettier - Prettier][5]: Opinionated code formatter.
 1. [Tailwind CSS IntelliSense - Tailwind Labs][6]: Intelligent Tailwind CSS tooling for VS Code.
 1. [WakaTime - WakaTime][11]: Metrics, insights, and time tracking for your programming activity.
@@ -28,5 +28,5 @@ Here are the must-have extensions I always install in a new setup for a frontend
 [7]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [8]: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
 [9]: https://marketplace.visualstudio.com/items?itemName=orsenkucher.vscode-graphql
-[10]: https://marketplace.visualstudio.com/items?itemName=silvenon.mdx
+[10]: https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx
 [11]: https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime
