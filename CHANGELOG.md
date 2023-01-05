@@ -1,5 +1,17 @@
 # blog
 
+## 0.0.3
+
+### Patch Changes
+
+- [#15](https://github.com/cseas/blog/pull/15) [`a457b8b`](https://github.com/cseas/blog/commit/a457b8bbeed3de8dbf0706fb95ef0a0f23d80986) Thanks [@cseas](https://github.com/cseas)! - chore: update link of MDX extension in blog post
+
+  - updated next 12 to 13
+  - updated next-mdx-remote 2 to 4
+  - removed styled-components from About
+  - updated Link components to include legacyBehavior
+  - updated next-mdx-remote usage to new syntax
+
 ## 0.0.2
 
 ### Patch Changes
