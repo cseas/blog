@@ -29,7 +29,7 @@ export function About() {
           Realkredit Danmark.
         </Anchor>
       </Typography>
-      <Typography variant="p" className="pt-4">
+      <Typography variant="p" sx={{ marginTop: "1rem" }}>
         I'm usually found around{" "}
         <Anchor
           color="#266129"
