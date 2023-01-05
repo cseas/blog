@@ -1,72 +1,73 @@
 import { Anchor, Typography } from "hazel-ui";
-import styled from "styled-components";
 
-interface AboutProps {}
-
-export function About(props: AboutProps) {
+export function About() {
   return (
-    <Section>
-      <Typography variant="p">
+    <section>
+      <Typography variant="p" sx={{ marginTop: "1rem" }}>
         Hello, I'm <strong>Abhijeet</strong>. I'm a software engineer at{" "}
-        <AnimatedLink
+        <Anchor
           color="#7e3878"
           backgroundColor="#f9e9ff"
           href="https://danskebank.dk/"
+          className="border-purple-9 no-underline transition-all hover:border-b-2"
+          style={{
+            textDecoration: "none",
+          }}
         >
           Danske Bank
-        </AnimatedLink>
+        </Anchor>
         , currently building modern web experiences for customers of{" "}
-        <AnimatedLink
+        <Anchor
           color="#a90055"
           backgroundColor="#ffeae8"
           href="https://beta.rd.dk/privat"
+          className="border-red-700 no-underline transition-all hover:border-b-2"
+          style={{
+            textDecoration: "none",
+          }}
         >
           Realkredit Danmark.
-        </AnimatedLink>
+        </Anchor>
       </Typography>
-      <Typography variant="p">
+      <Typography variant="p" sx={{ marginTop: "1rem" }}>
         I'm usually found around{" "}
-        <AnimatedLink
+        <Anchor
           color="#266129"
           backgroundColor="#e8f5e9"
           href="https://github.com/cseas"
+          className="border-green-700 no-underline transition-all hover:border-b-2"
+          style={{
+            textDecoration: "none",
+          }}
         >
           GitHub
-        </AnimatedLink>
+        </Anchor>
         ,{" "}
-        <AnimatedLink
+        <Anchor
           color="#be4d19"
           backgroundColor="#ffebd4"
           href="https://twitter.com/cse_as"
+          className="border-orange-700 no-underline transition-all hover:border-b-2"
+          style={{
+            textDecoration: "none",
+          }}
         >
           Twitter
-        </AnimatedLink>
+        </Anchor>
         , and{" "}
-        <AnimatedLink
+        <Anchor
           color="#2e3f9e"
           backgroundColor="#e0f1ff"
           href="https://www.linkedin.com/in/thatniceman/"
+          className="border-blue-700 no-underline transition-all hover:border-b-2"
+          style={{
+            textDecoration: "none",
+          }}
         >
           LinkedIn
-        </AnimatedLink>
+        </Anchor>
         . This is my personal blog where I share things I've learned.
       </Typography>
-    </Section>
+    </section>
   );
 }
-
-const AnimatedLink = styled(Anchor)`
-  display: inline-block;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: translate3d(0, -2px, 0);
-  }
-`;
-
-const Section = styled.section`
-  /* remove when removing tailwind */
-  p {
-    padding: 1rem 0 0;
-  }
-`;

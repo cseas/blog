@@ -1,9 +1,15 @@
-const withTM = require("next-transpile-modules")(["hazel-ui"]);
+/** @type {import('next').NextConfig} */
 
-module.exports = withTM({
+module.exports = {
   // basePath: "/blog", // when deploying to sub-path
+  compiler: {
+    styledComponents: true,
+  },
+
+  transpilePackages: ["hazel-ui"],
+
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
   },
-});
+};

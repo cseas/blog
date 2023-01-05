@@ -16,7 +16,7 @@ export function Posts({ allPostsData }: PostsProps) {
         {allPostsData.map(({ id, frontMatter }) => (
           <ListItem key={id}>
             <PostTitle variant="h4">
-              <Link href={`/posts/${id}`} passHref>
+              <Link href={`/posts/${id}`} passHref legacyBehavior>
                 <Anchor color="#008256">{frontMatter.title}</Anchor>
               </Link>
             </PostTitle>

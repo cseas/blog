@@ -1,10 +1,11 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
-import renderToString from "next-mdx-remote/render-to-string";
-import slug from "rehype-slug";
+import { serialize } from "next-mdx-remote/serialize";
+import path from "path";
 import link from "rehype-autolink-headings";
-import type { MdxRemote } from "next-mdx-remote/types";
+import slug from "rehype-slug";
+
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const LEARN_DIRECTORY = path.join(process.cwd(), "docs/learn");
 
@@ -16,7 +17,7 @@ interface FrontMatter {
 export interface LearnPost {
   id: string;
   frontMatter: FrontMatter;
-  mdxSource?: MdxRemote.Source;
+  mdxSource?: MDXRemoteSerializeResult;
 }
 
 export function getSortedLearnData(): Array<LearnPost> {
@@ -70,8 +71,11 @@ export async function getLearnData(id: string) {
   // use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  const mdxSource = await renderToString(matterResult.content, {
-    mdxOptions: { rehypePlugins: [slug, link] },
+  const mdxSource = await serialize(matterResult.content, {
+    mdxOptions: {
+      rehypePlugins: [slug, link],
+      development: false, // TODO: This is temporary: https://github.com/hashicorp/next-mdx-remote/issues/307#issuecomment-1363415249
+    },
   });
 
   return {
