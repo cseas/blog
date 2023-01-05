@@ -3,7 +3,7 @@ import { Anchor, Typography } from "hazel-ui";
 export function About() {
   return (
     <section>
-      <Typography variant="p" className="pt-4">
+      <Typography variant="p" sx={{ marginTop: "1rem" }}>
         Hello, I'm <strong>Abhijeet</strong>. I'm a software engineer at{" "}
         <Anchor
           color="#7e3878"
