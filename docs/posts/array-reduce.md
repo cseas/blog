@@ -17,7 +17,7 @@ The problem is to get all the index positions of the array where a key is equal 
 
 This can be done in TypeScript with `Array.prototype.reduce()` as follows:
 
-```ts:getIndexes.ts
+```ts
 function getIndexes(dataArray: Data[]): number[] {
   return data.reduce<number[]>((arr, obj, index) => {
     if (obj.a) {

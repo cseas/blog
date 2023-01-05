@@ -1,12 +1,11 @@
 import { Typography } from "hazel-ui";
+import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import type { Post } from "../lib";
 import { Date } from "../ui";
 import { Layout } from "../wrappers";
-import hydrate from "next-mdx-remote/hydrate";
 
 export function PostPage({ frontMatter, mdxSource }: Post) {
-  const content = hydrate(mdxSource);
   return (
     <>
       <Head>
@@ -22,8 +21,8 @@ export function PostPage({ frontMatter, mdxSource }: Post) {
 
           <br />
 
-          <div className="prose dark:prose-dark max-w-none w-full">
-            {content}
+          <div className="prose w-full max-w-none dark:prose-dark">
+            <MDXRemote {...mdxSource} />
           </div>
         </article>
       </Layout>

@@ -1,12 +1,13 @@
+import rehypePrism from "@mapbox/rehype-prism";
 import fs from "fs";
 import matter from "gray-matter";
+import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-import renderToString from "next-mdx-remote/render-to-string";
-import codeTitle from "remark-code-titles";
-import slug from "rehype-slug";
 import link from "rehype-autolink-headings";
-import rehypePrism from "@mapbox/rehype-prism";
-import type { MdxRemote } from "next-mdx-remote/types";
+import slug from "rehype-slug";
+import codeTitle from "remark-code-titles";
+
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "docs/posts");
 
@@ -18,7 +19,7 @@ interface FrontMatter {
 export interface Post {
   id: string;
   frontMatter: FrontMatter;
-  mdxSource?: MdxRemote.Source;
+  mdxSource?: MDXRemoteSerializeResult;
 }
 
 export function getSortedPostsData(): Array<Post> {
@@ -72,10 +73,11 @@ export async function getPostData(id: string) {
   // use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  const mdxSource = await renderToString(matterResult.content, {
+  const mdxSource = await serialize(matterResult.content, {
     mdxOptions: {
       remarkPlugins: [codeTitle],
       rehypePlugins: [slug, link, rehypePrism],
+      development: false, // TODO: This is temporary: https://github.com/hashicorp/next-mdx-remote/issues/307#issuecomment-1363415249
     },
   });
 
