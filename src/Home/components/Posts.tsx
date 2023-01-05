@@ -11,10 +11,16 @@ interface PostsProps {
 export function Posts({ allPostsData }: PostsProps) {
   return (
     <section style={{ paddingTop: "3rem" }}>
-      <RecentPosts variant="h2">Recent Posts</RecentPosts>
-      <List>
+      <Typography variant="h2" sx={{ textAlign: "center" }}>
+        Recent Posts
+      </Typography>
+      <ul>
         {allPostsData.map(({ id, frontMatter }) => (
-          <ListItem key={id}>
+          <li
+            className="mt-8 rounded-2xl bg-mauve-3 p-7 hover:bg-mauve-4"
+            key={id}
+            style={{ boxShadow: "5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff" }}
+          >
             <PostTitle variant="h4">
               <Link href={`/posts/${id}`} passHref legacyBehavior>
                 <Anchor color="#008256">{frontMatter.title}</Anchor>
@@ -24,32 +30,13 @@ export function Posts({ allPostsData }: PostsProps) {
             <Typography>
               <Date dateString={frontMatter.date} />
             </Typography>
-          </ListItem>
+          </li>
         ))}
-      </List>
+      </ul>
     </section>
   );
 }
 
-const List = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const ListItem = styled.li`
-  padding: 1.7rem;
-  margin: 2rem 0 0;
-
-  border-radius: 16px;
-  background: #f7f7f7;
-  box-shadow: 5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff;
-`;
-
 const PostTitle = styled(Typography)`
   color: #008256;
-`;
-
-const RecentPosts = styled(Typography)`
-  text-align: center;
 `;
