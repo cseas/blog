@@ -3,7 +3,7 @@ import Head from "next/head";
 import { config } from "../config";
 import type { Post } from "../lib";
 import { Layout } from "../wrappers";
-import { About, Posts } from "./components";
+import { About, RecentPosts } from "./components";
 
 const page = {
   title: config.name,
@@ -50,7 +50,7 @@ export function Home({ allPostsData }: HomeProps) {
         </header>
         <main>
           <About />
-          <Posts allPostsData={allPostsData} />
+          <RecentPosts allPostsData={allPostsData} />
         </main>
       </Layout>
     </>
