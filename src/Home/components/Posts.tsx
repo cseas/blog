@@ -1,6 +1,5 @@
 import { Anchor, Typography } from "hazel-ui";
 import Link from "next/link";
-import styled from "styled-components";
 import { Post } from "../../lib";
 import { Date } from "../../ui";
 
@@ -21,11 +20,11 @@ export function Posts({ allPostsData }: PostsProps) {
             key={id}
             style={{ boxShadow: "5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff" }}
           >
-            <PostTitle variant="h4">
+            <Typography variant="h4">
               <Link href={`/posts/${id}`} passHref legacyBehavior>
                 <Anchor color="#008256">{frontMatter.title}</Anchor>
               </Link>
-            </PostTitle>
+            </Typography>
 
             <Typography>
               <Date dateString={frontMatter.date} />
@@ -36,7 +35,3 @@ export function Posts({ allPostsData }: PostsProps) {
     </section>
   );
 }
-
-const PostTitle = styled(Typography)`
-  color: #008256;
-`;
