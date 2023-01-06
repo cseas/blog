@@ -15,15 +15,13 @@ export function PostListItem({ postData }: PostListItemProps) {
       className="mt-8 rounded-2xl bg-mauve-3 p-7 transition-transform hover:scale-[1.01] hover:bg-mauve-4"
       style={{ boxShadow: "5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff" }}
     >
-      <Typography variant="h4">
-        <Link href={`/posts/${id}`} passHref legacyBehavior>
-          <Anchor color="#008256">{frontMatter.title}</Anchor>
-        </Link>
-      </Typography>
+      <Link href={`/posts/${id}`} className="hover:no-underline">
+        <Typography variant="h4">{frontMatter.title}</Typography>
 
-      <Typography>
-        <Date dateString={frontMatter.date} />
-      </Typography>
+        <Typography>
+          <Date dateString={frontMatter.date} />
+        </Typography>
+      </Link>
     </li>
   );
 }
