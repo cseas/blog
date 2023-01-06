@@ -1,11 +1,10 @@
+import { Typography } from "hazel-ui";
 import Head from "next/head";
-import { Anchor, Typography } from "hazel-ui";
+
 import { config } from "../config";
-import { Layout } from "../wrappers";
-import styled from "styled-components";
-import Link from "next/link";
-import { Date } from "../ui";
 import type { Post } from "../lib/posts";
+import { Layout } from "../wrappers";
+import { PostListItem } from "./components";
 
 const page = {
   title: config.name + " | All Posts",
@@ -39,42 +38,13 @@ export function Posts({ allPostsData }: PostsProps): JSX.Element {
         <section>
           <Typography variant="h1">All Posts</Typography>
 
-          <List>
-            {allPostsData.map(({ id, frontMatter }) => (
-              <ListItem key={id}>
-                <PostTitle variant="h4">
-                  <Link href={`/posts/${id}`} passHref>
-                    <Anchor color="#008256">{frontMatter.title}</Anchor>
-                  </Link>
-                </PostTitle>
-
-                <Typography>
-                  <Date dateString={frontMatter.date} />
-                </Typography>
-              </ListItem>
+          <ul>
+            {allPostsData.map((postData) => (
+              <PostListItem key={postData.id} postData={postData} />
             ))}
-          </List>
+          </ul>
         </section>
       </Layout>
     </>
   );
 }
-
-const List = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const ListItem = styled.li`
-  padding: 1.7rem;
-  margin: 2rem 0 0;
-
-  border-radius: 16px;
-  background: #f7f7f7;
-  box-shadow: 5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff;
-`;
-
-const PostTitle = styled(Typography)`
-  color: #008256;
-`;

@@ -1,2 +1,2 @@
 export { About } from "./About";
-export { Posts } from "./Posts";
+export { RecentPosts } from "./RecentPosts";
