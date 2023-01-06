@@ -13,11 +13,9 @@ export function RecentPosts({ allPostsData }: PostsProps) {
       <Typography variant="h2" sx={{ textAlign: "center" }}>
         Recent Posts
       </Typography>
-      <ul>
-        {allPostsData.slice(0, 3).map(({ mdxSource, ...postData }) => (
-          <PostListItem key={postData.id} postData={postData} />
-        ))}
-      </ul>
+      {allPostsData.slice(0, 3).map(({ mdxSource, ...postData }) => (
+        <PostListItem key={postData.id} postData={postData} />
+      ))}
     </section>
   );
 }
