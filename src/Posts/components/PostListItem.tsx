@@ -17,10 +17,14 @@ export function PostListItem({ postData }: PostListItemProps) {
     >
       <Link
         href={`/posts/${id}`}
-        className="inline-block w-full p-7 hover:no-underline"
+        className="inline-block w-full p-7 text-purple-11 hover:no-underline"
       >
         <Typography variant="h4">{frontMatter.title}</Typography>
 
+        {/* TODO: This is a use-case where we need the Typography styles 
+        but we can't use the Typography component because it needs to render
+        as a <time> element which has different props. Ideally the classNames
+        for Typography should be provided separately. */}
         <Typography>
           <Date dateString={frontMatter.date} />
         </Typography>
