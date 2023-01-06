@@ -1,5 +1,14 @@
 # blog
 
+## 0.0.4
+
+### Patch Changes
+
+- [#17](https://github.com/cseas/blog/pull/17) [`529725c`](https://github.com/cseas/blog/commit/529725c97a81b806e13cdd9cf3eccebd4af21e96) Thanks [@cseas](https://github.com/cseas)! - chore: remove styled-components
+
+  - Refactored RecentPosts, Learn and Posts components to use the same code for list items.
+  - Update RecentPosts to show only 3 latest posts.
+
 ## 0.0.3
 
 ### Patch Changes
