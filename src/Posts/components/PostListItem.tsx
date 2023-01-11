@@ -18,7 +18,7 @@ export function PostListItem({ postData }: PostListItemProps) {
     >
       <Link
         href={`/posts/${id}`}
-        className="inline-block w-full p-7 text-purple-11 hover:no-underline"
+        className="inline-block w-full p-7 hover:no-underline"
       >
         <Typography color={Color.green11} variant="title">
           {frontMatter.title}
