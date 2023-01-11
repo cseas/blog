@@ -10,7 +10,7 @@ interface PostsProps {
 export function RecentPosts({ allPostsData }: PostsProps) {
   return (
     <section style={{ paddingTop: "3rem" }}>
-      <Typography variant="h2" sx={{ textAlign: "center" }}>
+      <Typography variant="headline" sx={{ textAlign: "center" }}>
         Recent Posts
       </Typography>
       {allPostsData.slice(0, 3).map(({ mdxSource, ...postData }) => (

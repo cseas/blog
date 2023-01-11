@@ -1,5 +1,6 @@
-import { Typography } from "hazel-ui";
+import { Color, Typography } from "hazel-ui";
 import Link from "next/link";
+
 import { Date } from "../../ui";
 
 import type { Post } from "../../lib";
@@ -19,7 +20,9 @@ export function PostListItem({ postData }: PostListItemProps) {
         href={`/posts/${id}`}
         className="inline-block w-full p-7 text-purple-11 hover:no-underline"
       >
-        <Typography variant="h4">{frontMatter.title}</Typography>
+        <Typography color={Color.green11} variant="title">
+          {frontMatter.title}
+        </Typography>
 
         {/* TODO: This is a use-case where we need the Typography styles 
         but we can't use the Typography component because it needs to render
