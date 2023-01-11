@@ -1,4 +1,3 @@
-import { Box } from "hazel-ui";
 import { ReactNode } from "react";
 import { Navbar } from "../ui";
 
@@ -10,9 +9,15 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Navbar />
-      <Box maxWidth="50rem" padding="3rem 1rem 6rem" margin="0 auto">
+      <div
+        style={{
+          maxWidth: "50rem",
+          padding: "48px 16px 96px",
+          margin: "0 auto",
+        }}
+      >
         {children}
-      </Box>
+      </div>
     </>
   );
 }
