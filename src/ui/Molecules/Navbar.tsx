@@ -10,7 +10,7 @@ export function Navbar() {
 
   return (
     <div className="sticky top-0 z-10 border-b border-mauve-7 bg-slate-50/50 backdrop-blur-lg backdrop-saturate-100 dark:bg-slate-900/75">
-      <div className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
+      <nav className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
         {pages.map(({ href, label }) => (
           <Link
             key={label}
@@ -20,7 +20,7 @@ export function Navbar() {
             {label}
           </Link>
         ))}
-      </div>
+      </nav>
     </div>
   );
 }

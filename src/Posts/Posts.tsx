@@ -36,7 +36,7 @@ export function Posts({ allPostsData }: PostsProps): JSX.Element {
       </Head>
       <Layout>
         <section>
-          <Typography variant="h1">All Posts</Typography>
+          <Typography variant="display">All Posts</Typography>
 
           <ul>
             {allPostsData.map((postData) => (
