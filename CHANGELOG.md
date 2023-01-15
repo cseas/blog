@@ -1,5 +1,23 @@
 # blog
 
+## 0.0.5
+
+### Patch Changes
+
+- [#19](https://github.com/cseas/blog/pull/19) [`6b6556f`](https://github.com/cseas/blog/commit/6b6556f5185f855047c5daae54f69ea2b9b18a17) Thanks [@cseas](https://github.com/cseas)! - fix: convert whole article list-item to link
+
+  - Now users can click anywhere on an article card to open the article
+  - update hazel-ui with tree shaking, bundle size has improved
+  - remove usage of Box
+  - remove styledComponents from nextjs compiler
+  - remove transpilation of hazel-ui
+  - upgrade packages
+  - add imports for styles and fonts from hazel-ui
+  - update Typography variants
+  - fix specificity of prose link styles
+  - remove unused global styles
+  - add radix color blue to tailwind
+
 ## 0.0.4
 
 ### Patch Changes
