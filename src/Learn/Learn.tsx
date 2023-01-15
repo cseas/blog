@@ -37,7 +37,7 @@ export function Learn({ allLearnData }: LearnProps): JSX.Element {
 
       <Layout>
         <section>
-          <Typography variant="h1">Learn</Typography>
+          <Typography variant="display">Learn</Typography>
 
           <ul>
             {allLearnData.map(({ mdxSource, ...postData }) => (

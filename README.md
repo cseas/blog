@@ -18,6 +18,7 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 - [ ] Add jest
 - [ ] Add CI build and test checks
 - [ ] Add dependabot
+- [ ] use Inter variable font from @next/font
 
 ### Runtime software versions
 

@@ -13,9 +13,9 @@ export function PostPage({ frontMatter, mdxSource }: Post) {
       </Head>
       <Layout>
         <article>
-          <Typography variant="h1">{frontMatter.title}</Typography>
+          <Typography variant="display">{frontMatter.title}</Typography>
 
-          <Typography variant="p">
+          <Typography variant="label">
             <Date dateString={frontMatter.date} />
           </Typography>
 

@@ -1,4 +1,4 @@
-import { Box, Typography } from "hazel-ui";
+import { Typography } from "hazel-ui";
 import Head from "next/head";
 import { config } from "../config";
 import type { Post } from "../lib";
@@ -44,9 +44,9 @@ export function Home({ allPostsData }: HomeProps) {
             style={{ borderRadius: "72px" }}
           />
 
-          <Box padding="1rem 0">
-            <Typography variant="h1">{page.title}</Typography>
-          </Box>
+          <Typography variant="display" sx={{ margin: "1rem 0" }}>
+            {page.title}
+          </Typography>
         </header>
         <main>
           <About />

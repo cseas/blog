@@ -9,8 +9,8 @@ export function Navbar() {
   ];
 
   return (
-    <div className="sticky top-0 z-10 border-b border-mauve-7 bg-slate-50/75 backdrop-blur-xl backdrop-saturate-150 dark:bg-slate-900/75">
-      <div className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
+    <div className="sticky top-0 z-10 border-b border-mauve-7 bg-slate-50/60 backdrop-blur-lg backdrop-saturate-150 dark:bg-slate-900/60">
+      <nav className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
         {pages.map(({ href, label }) => (
           <Link
             key={label}
@@ -20,7 +20,7 @@ export function Navbar() {
             {label}
           </Link>
         ))}
-      </div>
+      </nav>
     </div>
   );
 }

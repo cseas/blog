@@ -3,7 +3,7 @@ import { Anchor, Typography } from "hazel-ui";
 export function About() {
   return (
     <section>
-      <Typography variant="p" sx={{ marginTop: "1rem" }}>
+      <Typography variant="body" sx={{ marginTop: "1rem" }}>
         Hello, I'm <strong>Abhijeet</strong>. I'm a software engineer at{" "}
         <Anchor
           color="#7e3878"
@@ -29,7 +29,8 @@ export function About() {
           Realkredit Danmark.
         </Anchor>
       </Typography>
-      <Typography variant="p" sx={{ marginTop: "1rem" }}>
+
+      <Typography variant="body" sx={{ marginTop: "1rem" }}>
         I'm usually found around{" "}
         <Anchor
           color="#266129"

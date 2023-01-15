@@ -77,7 +77,6 @@ export async function getPostData(id: string) {
     mdxOptions: {
       remarkPlugins: [codeTitle],
       rehypePlugins: [slug, link, rehypePrism],
-      development: false, // TODO: This is temporary: https://github.com/hashicorp/next-mdx-remote/issues/307#issuecomment-1363415249
     },
   });
 
