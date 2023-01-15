@@ -1,4 +1,4 @@
-import { Box, Typography } from "hazel-ui";
+import { Typography } from "hazel-ui";
 import Head from "next/head";
 import { config } from "../config";
 import type { Post } from "../lib";
