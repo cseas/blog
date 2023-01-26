@@ -1,69 +1,75 @@
-import { Anchor, Typography } from "hazel-ui";
+import { Anchor, Color, Typography } from "hazel-ui";
 
 export function About() {
   return (
     <section>
       <Typography variant="body" sx={{ marginTop: "1rem" }}>
-        Hello, I'm <strong>Abhijeet</strong>. I'm a software engineer at{" "}
+        Hello, I'm <strong>Abhijeet</strong>. I'm a{" "}
         <Anchor
-          color="#7e3878"
-          backgroundColor="#f9e9ff"
-          href="https://danskebank.dk/"
-          className="border-purple-9 no-underline transition-all hover:border-b-2"
-          style={{
-            textDecoration: "none",
-          }}
+          color={Color.orange11}
+          href="https://wiki.mozilla.org/Reps"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Mozilla Rep
+        </Anchor>{" "}
+        and a Senior Software Engineer at{" "}
+        <Anchor
+          color={Color.blue11}
+          href="https://razorpay.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Razorpay
+        </Anchor>
+        , currently working on omni-channel fintech products offering a seamless
+        experience across online and offline transactions for merchants. Past
+        experiences at:{" "}
+        <Anchor
+          color={Color.yellow11}
+          href="https://www.hackerrank.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          HackerRank
+        </Anchor>
+        ,{" "}
+        <Anchor
+          color={Color.purple11}
+          href="https://danskebank.com/"
+          target="_blank"
+          rel="noreferrer"
         >
           Danske Bank
         </Anchor>
-        , currently building modern web experiences for customers of{" "}
-        <Anchor
-          color="#a90055"
-          backgroundColor="#ffeae8"
-          href="https://beta.rd.dk/privat"
-          className="border-red-700 no-underline transition-all hover:border-b-2"
-          style={{
-            textDecoration: "none",
-          }}
-        >
-          Realkredit Danmark.
-        </Anchor>
+        .
       </Typography>
 
       <Typography variant="body" sx={{ marginTop: "1rem" }}>
-        I'm usually found around{" "}
+        You can find me on{" "}
         <Anchor
-          color="#266129"
-          backgroundColor="#e8f5e9"
+          color={Color.green11}
           href="https://github.com/cseas"
-          className="border-green-700 no-underline transition-all hover:border-b-2"
-          style={{
-            textDecoration: "none",
-          }}
+          target="_blank"
+          rel="noreferrer"
         >
           GitHub
         </Anchor>
         ,{" "}
         <Anchor
-          color="#be4d19"
-          backgroundColor="#ffebd4"
+          color={Color.orange11}
           href="https://twitter.com/cse_as"
-          className="border-orange-700 no-underline transition-all hover:border-b-2"
-          style={{
-            textDecoration: "none",
-          }}
+          target="_blank"
+          rel="noreferrer"
         >
           Twitter
         </Anchor>
         , and{" "}
         <Anchor
-          color="#2e3f9e"
-          backgroundColor="#e0f1ff"
+          color={Color.blue11}
           href="https://www.linkedin.com/in/thatniceman/"
-          className="border-blue-700 no-underline transition-all hover:border-b-2"
-          style={{
-            textDecoration: "none",
-          }}
+          target="_blank"
+          rel="noreferrer"
         >
           LinkedIn
         </Anchor>

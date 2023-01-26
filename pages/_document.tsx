@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@cse_as" />
         </Head>
-        <body className="bg-gradient-to-r from-mauve-2 to-mauve-3">
+        <body className="dark bg-gradient-to-tr from-slate-1 to-blue-2">
           <Main />
           <NextScript />
         </body>
