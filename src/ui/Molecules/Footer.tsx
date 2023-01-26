@@ -1,11 +1,10 @@
-import { Color, Typography } from "hazel-ui";
+import { Color, Divider, Typography } from "hazel-ui";
 import Link from "next/link";
-import { Divider } from "../Atoms/Divider";
 
 export function Footer() {
   return (
     <>
-      <Divider style={{ marginTop: "6rem" }} />
+      <Divider sx={{ marginTop: "6rem" }} />
       <footer className="mt-8 ml-8 flex">
         <div>
           <img className="inline w-8" src="/images/yt-music.png" />
