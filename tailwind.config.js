@@ -9,8 +9,8 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("windy-radix-palette")({
       colors: {
-        mauve: radixColors.mauve, // used in app background
-        mauveDark: radixColors.mauveDark,
+        slate: radixColors.slate, // used in app background
+        slateDark: radixColors.slateDark,
         purple: radixColors.purple, // used in navbar hover
         purpleDark: radixColors.purpleDark,
         blue: radixColors.blue, // used in app background

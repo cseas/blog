@@ -4,7 +4,6 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 ### Todo
 
-- [ ] remove styled-components
 - [ ] modify anchor component in hazel-ui
 - [ ] check dark mode issue in typography
 - [ ] fix publint issues with hazel-ui
