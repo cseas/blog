@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Navbar } from "../ui";
+import { Footer } from "../ui/Molecules/Footer";
 
 interface LayoutProps {
   children?: ReactNode;
@@ -17,6 +18,7 @@ export function Layout({ children }: LayoutProps) {
         }}
       >
         {children}
+        <Footer />
       </div>
     </>
   );

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-gray-100: #d1d5db;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,16 +25,11 @@ ul {
 }
 
 .prose a {
-  color: #0070f3;
-  text-decoration: none;
+  @apply border-b-2 border-none border-blue-8 no-underline transition-all;
 }
 
 .prose a:hover {
-  text-decoration: underline;
-}
-
-.prose a:visited {
-  color: #8a2be2;
+  border-bottom-style: solid;
 }
 
 /* Scroll # links only till navbar */
@@ -51,7 +42,7 @@ ul {
 
 .icon::after {
   margin-right: 0.4rem;
-  color: var(--color-gray-100);
+  color: #d1d5db;
   content: "#";
 }
 
@@ -135,21 +126,4 @@ ul {
 code[class*="language-"],
 pre[class*="language-"] {
   @apply text-gray-800 dark:text-gray-50;
-}
-
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.remark-code-title {
-  @apply rounded-t border border-b-0 border-gray-200 bg-gray-200 px-5 py-3 font-mono text-sm font-bold text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200;
-}
-
-.remark-code-title + pre {
-  @apply mt-0 rounded-t-none;
 }

@@ -1,2 +1,3 @@
-export { Date } from "./Atoms";
-export { Navbar } from "./Molecules";
+export { Date } from "./Atoms/Date";
+
+export { Navbar } from "./Molecules/Navbar";
