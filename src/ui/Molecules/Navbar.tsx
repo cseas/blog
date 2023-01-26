@@ -9,13 +9,18 @@ export function Navbar() {
   ];
 
   return (
-    <div className="sticky top-0 z-10 border-b border-slate-7 bg-slate-50/60 backdrop-blur-lg backdrop-saturate-150 dark:bg-slate-900/60">
+    <div
+      className="sticky top-0 z-10 mx-auto max-w-2xl rounded-b-xl 
+        border-b border-slate-7 bg-slate-50/60 backdrop-blur-lg 
+        backdrop-saturate-150 dark:bg-slate-900/70"
+    >
       <nav className="my-0 mx-auto flex max-w-xl justify-between px-5 py-2.5">
         {pages.map(({ href, label }) => (
           <Link
             key={label}
             href={href}
-            className="text-slate-11 transition-colors duration-150 hover:text-purple-11 hover:no-underline"
+            className="text-slate-11 transition-colors duration-150 
+              hover:text-purple-11 hover:no-underline"
           >
             {label}
           </Link>
