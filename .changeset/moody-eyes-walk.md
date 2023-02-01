@@ -19,3 +19,4 @@ feat: enable app directory
 - add footer
 - make navbar responsive
 - changes in tsconfig done by nextjs CLI
+- remove eslint-config-next
