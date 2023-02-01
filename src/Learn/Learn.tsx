@@ -1,3 +1,5 @@
+"use client";
+
 import { Typography } from "hazel-ui";
 import Head from "next/head";
 

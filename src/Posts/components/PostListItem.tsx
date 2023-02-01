@@ -12,10 +12,7 @@ interface PostListItemProps {
 export function PostListItem({ postData }: PostListItemProps) {
   const { id, frontMatter } = postData;
   return (
-    <article
-      className="mt-8 rounded-2xl bg-mauve-3 transition-transform hover:scale-[1.01] hover:bg-mauve-4"
-      style={{ boxShadow: "5px 5px 6px #b9b9b9, -5px -5px 6px #ffffff" }}
-    >
+    <article className="mt-8 rounded-2xl border border-slate-6 bg-slate-1 transition-transform hover:scale-[1.01] hover:bg-blue-1">
       <Link
         href={`/posts/${id}`}
         className="inline-block w-full p-7 hover:no-underline"
