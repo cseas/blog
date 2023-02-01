@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <>
       <Divider sx={{ marginTop: "6rem" }} />
-      <footer className="mt-8 ml-8 flex">
+      <footer className="mt-8 flex flex-wrap justify-center md:mx-8">
         <div>
           <img className="inline w-8" src="/images/yt-music.png" />
           <Typography
