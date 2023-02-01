@@ -32,25 +32,43 @@ export function Footer() {
 
         <div className="mx-auto mt-20 flex gap-20">
           <div className="flex flex-col gap-8">
-            <Link className="text-slate-11 hover:text-purple-11" href="">
+            <Link className="text-slate-11 hover:text-purple-11" href="/">
               Home
             </Link>
-            <Link className="text-slate-11 hover:text-purple-11" href="">
+            <Link className="text-slate-11 hover:text-purple-11" href="/">
               About
             </Link>
-            <Link className="text-slate-11 hover:text-purple-11" href="">
+            <Link
+              className="text-slate-11 hover:text-purple-11"
+              href="https://twitter.com/cse_as"
+            >
               Tweets
             </Link>
           </div>
 
           <div className="flex flex-col gap-8">
-            <Link className="text-slate-11 hover:text-green-600" href="">
+            <Link
+              className="text-slate-11 hover:text-green-600"
+              href="https://github.com/cseas"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </Link>
-            <Link className="text-slate-11 hover:text-blue-400" href="">
+            <Link
+              className="text-slate-11 hover:text-blue-400"
+              href="https://twitter.com/cse_as"
+              target="_blank"
+              rel="noreferrer"
+            >
               Twitter
             </Link>
-            <Link className="text-slate-11 hover:text-sky-700" href="">
+            <Link
+              className="text-slate-11 hover:text-sky-700"
+              href="https://www.linkedin.com/in/thatniceman"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </Link>
           </div>
