@@ -1,5 +1,28 @@
 # blog
 
+## 0.0.6
+
+### Patch Changes
+
+- [#21](https://github.com/cseas/blog/pull/21) [`dabc356`](https://github.com/cseas/blog/commit/dabc356933b9c4b60e8181ba90513a50bdd75e61) Thanks [@cseas](https://github.com/cseas)! - feat: enable app directory
+
+  - bump node version to 18 in bundle analysis CI
+  - add .vscode to .gitignore
+  - set npm as registry
+  - migrate home page to app directory
+  - enable styledComponents transform temporarily
+  - remove `next export` from build temporarily
+  - update hazel-ui to v0.3.0
+  - switch to dark mode
+  - change background gradient from mauve to slate
+  - Update bio
+  - add global css for links under prose
+  - remove dead global css
+  - add footer
+  - make navbar responsive
+  - changes in tsconfig done by nextjs CLI
+  - remove eslint-config-next
+
 ## 0.0.5
 
 ### Patch Changes
