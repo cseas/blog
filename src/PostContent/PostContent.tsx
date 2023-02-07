@@ -33,7 +33,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
         </article>
 
         <Typography variant="label" sx={{ marginTop: "3rem" }}>
-          Last Updated: <Date dateString={frontMatter.date} />
+          Last Updated - <Date dateString={frontMatter.date} />
         </Typography>
       </Layout>
     </>

@@ -14,11 +14,12 @@ export function Footer() {
               sx={{ display: "inline", marginLeft: "8px" }}
             >
               Now Playing
-            </Typography>{" "}
+            </Typography>
+
             <Typography
               color={Color.gray10}
               variant="body"
-              sx={{ display: "inline" }}
+              sx={{ display: "inline", marginLeft: "6px" }}
             >
               - YouTube Music
             </Typography>
