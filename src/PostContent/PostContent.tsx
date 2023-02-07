@@ -21,6 +21,14 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
             <Date dateString={frontMatter.date} />
           </Typography>
 
+          {frontMatter.cover ? (
+            <img
+              src={frontMatter.cover}
+              alt="Cover image"
+              style={{ marginTop: "1rem" }}
+            />
+          ) : null}
+
           <br />
 
           <div className="prose w-full max-w-none dark:prose-dark">
