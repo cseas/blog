@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllPostIds, getPostData } from "../../src";
 
-export { PostPage as default } from "../../src";
+export { PostContent as default } from "../../src";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();

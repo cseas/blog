@@ -7,7 +7,7 @@ import type { Post } from "../lib";
 import { Date } from "../ui";
 import { Layout } from "../wrappers";
 
-export function PostPage({ frontMatter, mdxSource }: Post) {
+export function PostContent({ frontMatter, mdxSource }: Post) {
   return (
     <>
       <Head>
