@@ -4,6 +4,9 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 ### Todo
 
+- [ ] Migrate old blog
+- [ ] Add Edit on GitHub
+- [ ] Add "Discuss on Twitter"
 - [ ] Remove theme from tailwind config
 - [ ] Add a lib for remark/rehype syntax highlighting
 - [ ] Add prettier config

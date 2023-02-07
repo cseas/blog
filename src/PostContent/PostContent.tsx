@@ -17,10 +17,6 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
         <article>
           <Typography variant="display">{frontMatter.title}</Typography>
 
-          <Typography variant="label">
-            <Date dateString={frontMatter.date} />
-          </Typography>
-
           {frontMatter.cover ? (
             <img
               src={frontMatter.cover}
@@ -35,6 +31,10 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
             <MDXRemote {...mdxSource} />
           </div>
         </article>
+
+        <Typography variant="label" sx={{ marginTop: "3rem" }}>
+          Last Updated: <Date dateString={frontMatter.date} />
+        </Typography>
       </Layout>
     </>
   );
