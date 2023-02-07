@@ -1,5 +1,18 @@
 # blog
 
+## 0.0.7
+
+### Patch Changes
+
+- [#23](https://github.com/cseas/blog/pull/23) [`facaa58`](https://github.com/cseas/blog/commit/facaa58c5783324be63f849ba0b7b396471f76cf) Thanks [@cseas](https://github.com/cseas)! - feat: add cover image support for posts
+
+  - add cover image to vscode-extensions
+  - upgrade next to 13.1.6
+  - upgrade hazel-ui to 0.4.0
+  - typography improvements
+  - move post date to bottom of the content
+  - add app directory to tailwind config
+
 ## 0.0.6
 
 ### Patch Changes
