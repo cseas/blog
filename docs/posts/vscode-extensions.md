@@ -1,6 +1,7 @@
 ---
 title: "VSCode extensions I use as a Frontend Developer"
 date: "2021-02-19"
+cover: "/covers/vscode-extensions.webp"
 ---
 
 I've used many editors and IDEs: Notepad++, Gedit, Vim, Sublime Text, Atom, Eclipse, Webstorm, PyCharm, Brackets, etc. But none of them provide a better experience than VSCode for me, regardless of what language or framework I'm programming in. The only exceptions I've found so far are Visual Studio for .NET and IntelliJ IDEA for Java.

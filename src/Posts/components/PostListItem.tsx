@@ -25,7 +25,7 @@ export function PostListItem({ postData }: PostListItemProps) {
         but we can't use the Typography component because it needs to render
         as a <time> element which has different props. Ideally the classNames
         for Typography should be provided separately. */}
-        <Typography>
+        <Typography sx={{ marginTop: "0.375rem" }}>
           <Date dateString={frontMatter.date} />
         </Typography>
       </Link>

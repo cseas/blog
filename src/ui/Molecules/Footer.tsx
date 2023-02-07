@@ -7,20 +7,24 @@ export function Footer() {
       <Divider sx={{ marginTop: "6rem" }} />
       <footer className="mt-8 flex flex-wrap justify-center md:mx-8">
         <div>
-          <img className="inline w-8" src="/images/yt-music.png" />
-          <Typography
-            variant="title"
-            sx={{ display: "inline", marginLeft: "8px" }}
-          >
-            Now Playing
-          </Typography>{" "}
-          <Typography
-            color={Color.gray10}
-            variant="title"
-            sx={{ display: "inline" }}
-          >
-            - YouTube Music
-          </Typography>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img className="inline w-8" src="/images/yt-music.png" />
+            <Typography
+              variant="body"
+              sx={{ display: "inline", marginLeft: "8px" }}
+            >
+              Now Playing
+            </Typography>
+
+            <Typography
+              color={Color.gray10}
+              variant="body"
+              sx={{ display: "inline", marginLeft: "6px" }}
+            >
+              - YouTube Music
+            </Typography>
+          </div>
+
           <iframe
             className="my-5 h-72 w-72 rounded-xl"
             src="https://www.youtube.com/embed/videoseries?list=PLBUqLZ7wADZ2qDc0bXqLswecvauZYJGna&modestbranding=1"

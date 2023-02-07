@@ -31,7 +31,7 @@ export function Home({ allPostsData }: HomeProps) {
             style={{ borderRadius: "72px" }}
           />
 
-          <Typography variant="display" sx={{ margin: "1rem 0" }}>
+          <Typography variant="headline" sx={{ margin: "1rem 0" }}>
             {pageMeta.title}
           </Typography>
         </header>

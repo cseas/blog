@@ -14,6 +14,8 @@ const POSTS_DIRECTORY = path.join(process.cwd(), "docs/posts");
 interface FrontMatter {
   date: string;
   title: string;
+  /** cover image for the post */
+  cover?: string;
 }
 
 export interface Post {

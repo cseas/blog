@@ -7,7 +7,7 @@ import type { Post } from "../lib";
 import { Date } from "../ui";
 import { Layout } from "../wrappers";
 
-export function PostPage({ frontMatter, mdxSource }: Post) {
+export function PostContent({ frontMatter, mdxSource }: Post) {
   return (
     <>
       <Head>
@@ -17,9 +17,13 @@ export function PostPage({ frontMatter, mdxSource }: Post) {
         <article>
           <Typography variant="display">{frontMatter.title}</Typography>
 
-          <Typography variant="label">
-            <Date dateString={frontMatter.date} />
-          </Typography>
+          {frontMatter.cover ? (
+            <img
+              src={frontMatter.cover}
+              alt="Cover image"
+              style={{ marginTop: "1rem" }}
+            />
+          ) : null}
 
           <br />
 
@@ -27,6 +31,10 @@ export function PostPage({ frontMatter, mdxSource }: Post) {
             <MDXRemote {...mdxSource} />
           </div>
         </article>
+
+        <Typography variant="label" sx={{ marginTop: "3rem" }}>
+          Last Updated - <Date dateString={frontMatter.date} />
+        </Typography>
       </Layout>
     </>
   );
