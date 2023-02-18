@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+export default {
   // basePath: "/blog", // when deploying to sub-path
 
   compiler: {
@@ -10,7 +10,12 @@ module.exports = {
   },
 
   webpack: (config) => {
-    config.resolve.fallback = { fs: false };
+    // allow .js file extension in imports for moduleResolution: node16
+    // https://github.com/vercel/next.js/discussions/41189#discussioncomment-3806170
+    config.resolve.extensionAlias = {
+      ".js": [".js", ".ts", ".tsx"],
+    };
+    config.resolve.fallback = { fs: false }; // for using 'fs' import
     return config;
   },
 
