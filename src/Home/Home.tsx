@@ -1,18 +1,10 @@
-"use client";
-
-import { Typography } from "hazel-ui";
-import { config } from "../config";
-import type { Post } from "../lib";
-import { Layout } from "../wrappers";
-import { About, RecentPosts } from "./components";
-
-export const pageMeta = {
-  title: config.name,
-  description: config.description,
-  image: config.basePath + config.photo,
-  imageAlt: `Headshot of ${config.name}`,
-  twitter: config.twitter,
-};
+import { Typography } from "hazel-ui/Typography";
+import { config } from "../config.js";
+import type { Post } from "../lib/index.js";
+import { Layout } from "../wrappers/index.js";
+import { About } from "./components/About.js";
+import { RecentPosts } from "./components/RecentPosts.js";
+import { pageMeta } from "./meta.js";
 
 interface HomeProps {
   allPostsData: Array<Post>;

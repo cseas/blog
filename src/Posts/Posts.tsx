@@ -1,6 +1,4 @@
-"use client";
-
-import { Typography } from "hazel-ui";
+import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 
 import { config } from "../config";

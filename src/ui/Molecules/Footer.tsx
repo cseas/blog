@@ -1,4 +1,6 @@
-import { Color, Divider, Typography } from "hazel-ui";
+import { Color } from "hazel-ui/Color";
+import { Divider } from "hazel-ui/Divider";
+import { Typography } from "hazel-ui/Typography";
 import Link from "next/link";
 
 export function Footer() {
