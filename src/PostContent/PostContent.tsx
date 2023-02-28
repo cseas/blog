@@ -1,6 +1,4 @@
-"use client";
-
-import { Typography } from "hazel-ui";
+import { Typography } from "hazel-ui/Typography";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import type { Post } from "../lib";

@@ -1,4 +1,5 @@
-import { Color, Typography } from "hazel-ui";
+import { Color } from "hazel-ui/Color";
+import { Typography } from "hazel-ui/Typography";
 import Link from "next/link";
 
 import { Date } from "../../ui";

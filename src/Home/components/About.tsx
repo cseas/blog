@@ -1,5 +1,6 @@
-"use client";
-import { Anchor, Color, Typography } from "hazel-ui";
+import { Anchor } from "hazel-ui/Anchor";
+import { Color } from "hazel-ui/Color";
+import { Typography } from "hazel-ui/Typography";
 
 export function About() {
   return (

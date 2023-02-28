@@ -22,4 +22,8 @@ export default {
   experimental: {
     appDir: true,
   },
+
+  // Todo: This is temporary until the below issue is resolved
+  // https://github.com/vercel/next.js/issues/46267
+  typescript: { ignoreBuildErrors: true },
 };

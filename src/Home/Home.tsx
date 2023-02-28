@@ -1,5 +1,4 @@
-"use client";
-import { Typography } from "hazel-ui";
+import { Typography } from "hazel-ui/Typography";
 import { config } from "../config.js";
 import type { Post } from "../lib/index.js";
 import { Layout } from "../wrappers/index.js";
