@@ -1,3 +1,4 @@
+"use client";
 import { Typography } from "hazel-ui";
 
 import { Post } from "../../lib";

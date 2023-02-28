@@ -1,3 +1,4 @@
+"use client";
 import { Color, Divider, Typography } from "hazel-ui";
 import Link from "next/link";
 

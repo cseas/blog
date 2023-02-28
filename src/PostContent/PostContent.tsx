@@ -7,7 +7,13 @@ import type { Post } from "../lib";
 import { Date } from "../ui";
 import { Layout } from "../wrappers";
 
-export function PostContent({ frontMatter, mdxSource }: Post) {
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+
+interface PostContentProps extends Post {
+  mdxSource: MDXRemoteSerializeResult;
+}
+
+export function PostContent({ frontMatter, mdxSource }: PostContentProps) {
   return (
     <>
       <Head>

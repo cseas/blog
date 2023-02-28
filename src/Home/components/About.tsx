@@ -1,3 +1,4 @@
+"use client";
 import { Anchor, Color, Typography } from "hazel-ui";
 
 export function About() {

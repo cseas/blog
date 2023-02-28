@@ -11,7 +11,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params = {} }) => {
   const { frontMatter, mdxSource } = await getLearnData(params.id as string);
   return {
     props: {
