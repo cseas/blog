@@ -1,5 +1,19 @@
 # blog
 
+## 0.0.8
+
+### Patch Changes
+
+- [#25](https://github.com/cseas/blog/pull/25) [`14350c5`](https://github.com/cseas/blog/commit/14350c53f806713367286c1423fe87f107efec3e) Thanks [@cseas](https://github.com/cseas)! - feat: esm with type module
+
+  - change all hazel-ui imports to deep imports to workaround [Next.js tree shaking bug](https://github.com/vercel/next.js/issues/12557#issuecomment-1427088366)
+  - replace head.js with metadata
+  - add cjs/mjs extension to config files
+  - initial draft for package linting post
+  - upgrade to typescript 5
+  - ESM setup: `type: module` in package.json and `moduleResolution: node16` in tsconfig
+  - tsconfig target ESNext
+
 ## 0.0.7
 
 ### Patch Changes
