@@ -12,6 +12,8 @@ const LEARN_DIRECTORY = path.join(process.cwd(), "docs/learn");
 interface FrontMatter {
   date: string;
   title: string;
+  /** cover image for the post */
+  cover?: string;
 }
 
 export interface LearnPost {
