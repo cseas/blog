@@ -1,9 +1,9 @@
 ---
 title: "Git commands I use regularly as a Software Engineer"
-date: "2021-05-01"
+date: "2023-03-26"
 ---
 
-There are possibly thousands of "Git cheatsheets" floating all over the internet. Those have never worked for me since you never really need to remember 50 different commands to get everyday work done.
+There are possibly thousands of "Git cheatsheets" floating all over the internet. Those have never worked for me since you never need to remember 50 different commands to get everyday work done.
 
 Here are git commands I use regularly in my daily work.
 
@@ -13,36 +13,24 @@ Here are git commands I use regularly in my daily work.
    git status
    ```
 
-2. Update master branch (or the branch you want to create a feature branch from)
+2. Update main branch (or the branch you want to create a feature branch from)
 
    ```bash
-   git checkout master
+   git checkout main
    git fetch origin
-   git reset --hard origin/master
+   git reset --hard origin/main
    ```
 
-3. Create new feature branch from current branch
+3. Create new feature branch from `develop` branch
 
    ```bash
    git checkout develop
-   git checkout -b feature/new-feature
-   ```
-
-   If you want to specify which branch should the new branch be based on, add it as the last parameter.
-
-   ```bash
-   git checkout -b new-feature master
-   ```
-
-   To get a new branch from a remote source, specify the remote as well.
-
-   ```bash
-   git checkout -b new-feature origin/new-feature
+   git checkout -b feat/new-feature
    ```
 
 4. Push your local changes to a remote branch
 
-   Stage
+   Stage your changes:
 
    ```bash
    git add --all
@@ -50,16 +38,16 @@ Here are git commands I use regularly in my daily work.
 
    > I personally like using the VSCode Git UI to preview changes and stage files one by one instead of using the above command. But if you're sure you want to push all your changes, then above command is useful to stage everything instantly.
 
-   Commit
+   Commit to local git:
 
    ```bash
-     git commit -m "Add new-feature"
+   git commit -m "feat: add new-feature"
    ```
 
-   Push
+   Push to remote repository:
 
    ```bash
-   git push -u origin new-feature
+   git push -u origin feat/new-feature
    ```
 
    > Above push command is needed only once. This is used to create a new branch in the origin remote repository and link it to your local one. Afterwards, you can use `git push` without any parameters.
@@ -118,8 +106,10 @@ Here are git commands I use regularly in my daily work.
 
 9. Resolve merge conflicts in a Pull Request
 
+   Assuming you're trying to merge `feat/new-feature` branch into `develop`:
+
    ```bash
-   git checkout feature/new-feature
+   git checkout feat/new-feature
    git pull origin develop
    ```
 
@@ -139,6 +129,8 @@ Here are git commands I use regularly in my daily work.
     git reset --hard old-commit-id
     git push -f remote-name branch-name
     ```
+
+    > This will be useful when someone accidentally pushes a commit to a branch they weren't supposed to.
 
 11. Undo last commit. This will effectively reverse the last `git commit` and you won't lose the new changes you made.
 
@@ -160,7 +152,7 @@ Here are git commands I use regularly in my daily work.
    - [Feature Branch Workflow][3] when working individually and rapidly pushing new features to production.
    - [Forking Workflow][4] when contributing to open-source.
 
-2. Enforce a branch policy for your `master`/`main` & `develop` branches that allows only squash merges. Regular and Rebase merges work fine when everyone in the team knows how to correctly write a git history but more often than not people are just trying to get their code merged one way or the other. A squash merge strategy is one that stays out of your way the most and creates the least problems in a team of developers with varying expertise levels.
+2. Enforce a branch policy for your `main` & `develop` branches that allows only squash merges. Regular and Rebase merges work fine when everyone in the team knows how to correctly write a git history but more often than not people are just trying to get their code merged one way or the other. A squash merge strategy is the one that creates the least problems in a team of developers with varying expertise levels.
 
 3. Always make changes in feature branches. Never directly commit to the project's primary branches used for releases and user acceptance tests.
 
