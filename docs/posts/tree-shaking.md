@@ -1,6 +1,6 @@
 ---
-title: "Why should NPM library authors care about Tree Shaking"
-date: "2021-07-29"
+title: "[WIP] Why should NPM library authors care about Tree Shaking"
+date: "2023-03-26"
 ---
 
 Flat files are an issue for webpack:

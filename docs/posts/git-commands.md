@@ -28,6 +28,8 @@ Here are git commands I use regularly in my daily work.
    git checkout -b feat/new-feature
    ```
 
+   > A popular convention is to use slash as a separator in branch names as shown above but this can sometimes [cause problems][5] in your DevOps pipelines when branch names are used to tag Docker images. For this reason, I'd recommend using only hyphens in branch names, e.g., feat-new-feature.
+
 4. Push your local changes to a remote branch
 
    Stage your changes:
@@ -118,7 +120,7 @@ Here are git commands I use regularly in my daily work.
    ```bash
    git add .
    git commit -m "Resolve PR #12 merge conflicts"
-   git push origin feature/new-feature
+   git push origin feat/new-feature
    ```
 
    > If you're comfortable with the concept of rebase, prefer that way instead as shown in point 6 above.
@@ -162,3 +164,4 @@ Have questions? [Discuss on Twitter][1]
 [2]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 [3]: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 [4]: https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+[5]: https://community.atlassian.com/t5/Bitbucket-questions/How-to-push-docker-image-tagged-after-git-branch/qaq-p/1548825
