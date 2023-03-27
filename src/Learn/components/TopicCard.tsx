@@ -1,5 +1,15 @@
-interface TopicCardProps {}
+import type { LearnPost } from "../../lib/learn.js";
+import { Card, Typography } from "hazel-ui";
 
-export function TopicCard(props: TopicCardProps): JSX.Element {
-  return <></>;
+interface TopicCardProps {
+  learnData: LearnPost;
+}
+
+export function TopicCard({ learnData }: TopicCardProps): JSX.Element {
+  const { frontMatter } = learnData;
+  return (
+    <Card>
+      <Typography>{frontMatter.title}</Typography>
+    </Card>
+  );
 }

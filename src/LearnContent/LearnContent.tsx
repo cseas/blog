@@ -1,17 +1,21 @@
-import { Typography } from "hazel-ui/Typography";
-import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
+import { MDXRemote } from "next-mdx-remote";
+import { Typography } from "hazel-ui/Typography";
 
-import type { Post } from "../lib/posts.js";
-import { Date } from "../ui/Atoms/Date.js";
+import type { LearnPost } from "../lib/learn.js";
 import { Layout } from "../wrappers/Layout.js";
+import { Date } from "../ui/Atoms/Date.js";
 
-export function PostContent({ frontMatter, mdxSource }: Post) {
+export function LearnContent({
+  frontMatter,
+  mdxSource,
+}: LearnPost): JSX.Element {
   return (
     <>
       <Head>
         <title>{frontMatter.title}</title>
       </Head>
+
       <Layout>
         <article>
           <Typography variant="display">{frontMatter.title}</Typography>

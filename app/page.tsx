@@ -1,5 +1,7 @@
-import { Home, config, getSortedPostsData } from "../src";
-import { pageMeta } from "../src/Home/meta";
+import { Home } from "../src/Home/Home.js";
+import { pageMeta } from "../src/Home/meta.js";
+import { config } from "../src/config.js";
+import { getSortedPostsData } from "../src/lib/posts.js";
 
 import type { Metadata } from "next";
 

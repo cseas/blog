@@ -1,10 +1,12 @@
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
+import Link from "next/link";
 
-import { config } from "../config";
-import type { LearnPost } from "../lib/learn";
-import { PostListItem } from "../Posts/components";
-import { Layout } from "../wrappers";
+import { config } from "../config.js";
+import { Layout } from "../wrappers/Layout.js";
+import { TopicCard } from "./components/TopicCard.js";
+
+import type { LearnPost } from "../lib/learn.js";
 
 const page = {
   title: "Learn",
@@ -40,8 +42,10 @@ export function Learn({ allLearnData }: LearnProps): JSX.Element {
           <Typography variant="display">Learn</Typography>
 
           <ul>
-            {allLearnData.map(({ mdxSource, ...postData }) => (
-              <PostListItem key={postData.id} postData={postData} />
+            {allLearnData.map(({ mdxSource, ...learnData }) => (
+              <Link key={learnData.id} href={`/learn/${learnData.id}`}>
+                <TopicCard key={learnData.id} learnData={learnData} />
+              </Link>
             ))}
           </ul>
         </section>

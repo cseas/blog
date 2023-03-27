@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
-import { config } from "../src";
+import { config } from "../src/config.js";
 
 export default class MyDocument extends Document {
   render() {

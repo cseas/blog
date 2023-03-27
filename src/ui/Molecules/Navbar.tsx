@@ -5,7 +5,6 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/posts", label: "Posts" },
     { href: "/learn", label: "Learn" },
-    { href: "/links", label: "Links" },
   ];
 
   return (
@@ -14,7 +13,7 @@ export function Navbar() {
         border-slate-7 bg-slate-50/60 backdrop-blur-lg backdrop-saturate-150 
         dark:bg-slate-900/70 md:mx-auto md:max-w-2xl"
     >
-      <nav className="my-0 mx-2 flex max-w-full justify-between px-5 py-2.5 md:mx-auto md:max-w-xl">
+      <nav className="my-0 mx-2 flex max-w-full justify-around py-2.5 md:mx-auto md:max-w-xl">
         {pages.map(({ href, label }) => (
           <Link
             key={label}

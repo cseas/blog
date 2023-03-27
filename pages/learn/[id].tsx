@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getAllLearnIds, getLearnData } from "../../src/lib";
+import { getAllLearnIds, getLearnData } from "../../src/lib/learn.js";
 
-export { LearnPage as default } from "../../src";
+export { LearnContent as default } from "../../src/LearnContent/LearnContent.js";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllLearnIds();
