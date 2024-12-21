@@ -1,6 +1,7 @@
 ---
 title: "How to use Array.reduce() in TypeScript"
-date: "2023-03-26"
+date: "2024-12-22"
+cover: "/covers/typescript.avif"
 ---
 
 I recently bumped into a use case where I had an array of objects, similar to the one below:
@@ -49,7 +50,7 @@ Here's how the reducer function used in the example works:
 - For every element in the array, we check if the element has a key "a" that is true. If yes, we push the index of that element in the accumulator array and return the resulting array for use in the iteration for the next element until we're done walking through the whole original `data` array.
 - Finally, the accumulator will contain the list of all the indexes that satisfy the given condition, which is value ultimately returned from our custom `getIndexes()` function.
 
-Have questions? [Discuss on Twitter][1]
+> Have questions? [Discuss on Twitter][1]
 
 ### References
 
