@@ -1,0 +1,4 @@
+changeset-added:
+- any:
+  - changed-files:
+    - any-glob-to-any-file: ['.changeset/*']

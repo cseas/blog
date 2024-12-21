@@ -1,6 +1,6 @@
 ---
-title: "[WIP] Linting npm packages"
-date: "2023-03-30"
+title: "Linting npm packages"
+date: "2024-12-22"
 ---
 
 Publishing an npm package is a very different experience from writing locally shared code and can come with a lot of daunting challenges. Thankfully, there are multiple tools out there today that help us validate our published package.

@@ -1,8 +1,9 @@
 ### Description
 
-Summary of the change.
+Fixes:
 
 ### Checklist
 
-- [ ] My changes generate no new warnings
-- [ ] I've done a self-review of this pull request
+- [ ] I have self-reviewed the code and added `AI-PR-Review` label.
+- [ ] These changes don't generate any new warnings in the terminal/browser console.
+- [ ] This PR has new components/utils and tests have been added for them (if applicable).

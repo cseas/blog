@@ -11,7 +11,7 @@ import type { LearnPost } from "../lib/learn.js";
 const page = {
   title: "Learn",
   description: config.description,
-  image: config.basePath + config.photo,
+  image: config.host + config.basePath + config.photo,
   imageAlt: `Headshot of ${config.name}`,
   twitter: config.twitter,
 };

@@ -26,4 +26,7 @@ export default {
   // Todo: This is temporary until the below issue is resolved
   // https://github.com/vercel/next.js/issues/46267
   typescript: { ignoreBuildErrors: true },
+
+  // Todo: check why css is not loading from hazel-ui
+  transpilePackages: ["hazel-ui"],
 };

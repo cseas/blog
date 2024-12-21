@@ -52,7 +52,7 @@ However, it doesn't support customising any Rollup options which you might need 
 
 ## Tsdx
 
-Tsdx is a popular zero-config CLI for TypeScript package development. However, it's not maintained anymore and is not recommended for use. Rollup's preserveModules is also not officially supported: [https://github.com/formium/tsdx/issues/276](https://github.com/formium/tsdx/issues/276).
+Tsdx is a popular zero-config CLI for TypeScript package development. However, it's not maintained anymore and is not recommended for use. Rollup's `preserveModules` is also not officially supported: [https://github.com/formium/tsdx/issues/276](https://github.com/formium/tsdx/issues/276).
 
 > Have questions? [Discuss on Twitter](https://x.com/cse_as)
 

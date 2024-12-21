@@ -9,7 +9,7 @@ import { PostListItem } from "./components";
 const page = {
   title: config.name + " | All Posts",
   description: config.description,
-  image: config.basePath + config.photo,
+  image: config.host + config.basePath + config.photo,
   imageAlt: `Headshot of ${config.name}`,
   twitter: config.twitter,
 };
