@@ -12,7 +12,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
     title: frontMatter.title,
     image: config.host + frontMatter.cover,
     imageAlt: `Cover image for ${frontMatter.title}`,
-    twitter: "@cse_as",
+    twitter: config.twitter,
   };
 
   return (
@@ -35,7 +35,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
       </Head>
       <Layout>
         <article>
-          <Typography variant="display">{frontMatter.title}</Typography>
+          <Typography variant="display">{page.title}</Typography>
 
           {frontMatter.cover ? (
             <img src={frontMatter.cover} alt="Cover image" style={{ marginTop: "1rem" }} />
