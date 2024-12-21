@@ -54,7 +54,7 @@ ul {
 }
 
 .prose code {
-  @apply rounded-md border border-gray-100 bg-gray-100 px-1 py-0.5 text-gray-800 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200;
+  @apply rounded-md border border-gray-100 bg-gray-100 py-0.5 text-gray-800 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200;
 }
 
 .prose img {

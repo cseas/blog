@@ -1,6 +1,7 @@
 ---
 title: "How to use Array.reduce() in TypeScript"
-date: "2021-04-27"
+date: "2024-12-22"
+cover: "/covers/typescript.avif"
 ---
 
 I recently bumped into a use case where I had an array of objects, similar to the one below:
@@ -13,7 +14,7 @@ const dataArray: Data[] = [
 ];
 ```
 
-The problem is to get all the index positions of the array where a key is equal to a particular value. For example, we'd like to get all the indexes where the key `a` is `true`.
+The requirement is to get all the index positions of the array where a key is equal to a particular value. For example, we'd like to get all the indexes where the key `a` is `true`.
 
 This can be done in TypeScript with `Array.prototype.reduce()` as follows:
 
@@ -45,13 +46,13 @@ The _reducer_ function passed as the first parameter above uses 3 parameters:
 
 Here's how the reducer function used in the example works:
 
-- The initial value of the accumulator is initialized to an emppty array. The accumulator is the value which will eventually contain our result at the end of the processing.
+- The initial value of the accumulator is initialized to an empty array. The accumulator is the value which will eventually contain our result at the end of the processing.
 - For every element in the array, we check if the element has a key "a" that is true. If yes, we push the index of that element in the accumulator array and return the resulting array for use in the iteration for the next element until we're done walking through the whole original `data` array.
 - Finally, the accumulator will contain the list of all the indexes that satisfy the given condition, which is value ultimately returned from our custom `getIndexes()` function.
 
-Have questions? [Discuss on Twitter][1]
+> Have questions? [Discuss on Twitter][1]
 
-_References_:
+### References
 
 - [MDN Web Docs: Array.prototype.reduce()][2]
 

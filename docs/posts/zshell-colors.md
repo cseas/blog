@@ -1,6 +1,6 @@
 ---
-title: "Make MacOS Terminal prompt look colorful like Ubuntu"
-date: "2021-08-16"
+title: "[WIP] Make MacOS Terminal prompt look colorful like Ubuntu"
+date: "2023-03-30"
 ---
 
 Switching from Ubuntu's colorful bash terminal to the bland monochrome z-shell of MacOS can be underwhelming. All that white makes it hard to distinguish one command run from the other one when you're firing dozens of commands in a day.
