@@ -4,7 +4,7 @@ import { Typography } from "hazel-ui/Typography";
 
 import type { LearnPost } from "../lib/learn";
 import { Layout } from "../wrappers/Layout";
-import { Date } from "../ui/Atoms/Date";
+import { DateDisplay } from "../ui/Atoms/DateDisplay";
 
 import type { JSX } from "react";
 
@@ -31,7 +31,7 @@ export function LearnContent({ frontMatter, mdxSource }: LearnPost): JSX.Element
         </article>
 
         <Typography variant="label" sx={{ marginTop: "3rem" }}>
-          Last Updated - <Date dateString={frontMatter.date} />
+          Last Updated - <DateDisplay dateString={frontMatter.date} />
         </Typography>
       </Layout>
     </>

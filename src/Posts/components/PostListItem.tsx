@@ -2,7 +2,7 @@ import { Color } from "hazel-ui/Color";
 import { Typography } from "hazel-ui/Typography";
 import Link from "next/link";
 
-import { Date } from "../../ui";
+import { DateDisplay } from "../../ui";
 
 import type { Post } from "../../lib";
 
@@ -14,10 +14,7 @@ export function PostListItem({ postData }: PostListItemProps) {
   const { id, frontMatter } = postData;
   return (
     <article className="mt-8 rounded-2xl border border-slate-6 bg-slate-1 transition-transform hover:scale-[1.01] hover:bg-blue-1">
-      <Link
-        href={`/posts/${id}`}
-        className="inline-block w-full p-7 hover:no-underline"
-      >
+      <Link href={`/posts/${id}`} className="inline-block w-full p-7 hover:no-underline">
         <Typography color={Color.green11} variant="title">
           {frontMatter.title}
         </Typography>
@@ -27,7 +24,7 @@ export function PostListItem({ postData }: PostListItemProps) {
         as a <time> element which has different props. Ideally the classNames
         for Typography should be provided separately. */}
         <Typography sx={{ marginTop: "0.375rem" }}>
-          <Date dateString={frontMatter.date} />
+          <DateDisplay dateString={frontMatter.date} />
         </Typography>
       </Link>
     </article>

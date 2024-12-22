@@ -3,7 +3,7 @@ import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 
 import type { Post } from "../lib/posts";
-import { Date } from "../ui/Atoms/Date";
+import { DateDisplay } from "../ui/Atoms/DateDisplay";
 import { Layout } from "../wrappers/Layout";
 import { config } from "../config";
 
@@ -49,7 +49,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
         </article>
 
         <Typography variant="label" sx={{ marginTop: "3rem" }}>
-          Last Updated - <Date dateString={frontMatter.date} />
+          Last Updated - <DateDisplay dateString={frontMatter.date} />
         </Typography>
       </Layout>
     </>
