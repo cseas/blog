@@ -4,7 +4,7 @@ interface DateProps {
   dateString: string;
 }
 
-export function Date({ dateString }: DateProps) {
+export function DateDisplay({ dateString }: DateProps) {
   const date = parseISO(dateString);
   return (
     <time className="text-slate-11" dateTime={dateString}>

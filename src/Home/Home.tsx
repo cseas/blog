@@ -1,10 +1,12 @@
 import { Typography } from "hazel-ui/Typography";
-import { config } from "../config.js";
-import type { Post } from "../lib/index.js";
-import { Layout } from "../wrappers/index.js";
-import { About } from "./components/About.js";
-import { RecentPosts } from "./components/RecentPosts.js";
-import { pageMeta } from "./meta.js";
+
+import { config } from "../config";
+import { Layout } from "../wrappers/index";
+import { About } from "./components/About";
+import { RecentPosts } from "./components/RecentPosts";
+import { pageMeta } from "./meta";
+
+import type { Post } from "../lib/index";
 
 interface HomeProps {
   allPostsData: Array<Post>;

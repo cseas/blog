@@ -1,12 +1,14 @@
+import type { JSX } from "react";
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 import Link from "next/link";
 
-import { config } from "../config.js";
-import { Layout } from "../wrappers/Layout.js";
-import { TopicCard } from "./components/TopicCard.js";
+import { config } from "../config";
+import { Layout } from "../wrappers/Layout";
+import { TopicCard } from "./components/TopicCard";
 
-import type { LearnPost } from "../lib/learn.js";
+import type { LearnPost } from "../lib/learn";
+
 
 const page = {
   title: "Learn",
@@ -42,9 +44,9 @@ export function Learn({ allLearnData }: LearnProps): JSX.Element {
           <Typography variant="display">Learn</Typography>
 
           <ul>
-            {allLearnData.map(({ mdxSource, ...learnData }) => (
-              <Link key={learnData.id} href={`/learn/${learnData.id}`}>
-                <TopicCard key={learnData.id} learnData={learnData} />
+            {allLearnData.map(({ id, frontMatter }) => (
+              <Link key={id} href={`/learn/${id}`}>
+                <TopicCard key={id} learnData={{ id, frontMatter }} />
               </Link>
             ))}
           </ul>

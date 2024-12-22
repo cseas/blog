@@ -1,10 +1,13 @@
+import type { JSX } from "react";
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 
 import { config } from "../config";
-import type { Post } from "../lib/posts";
 import { Layout } from "../wrappers";
 import { PostListItem } from "./components";
+
+import type { Post } from "../lib/posts";
+
 
 const page = {
   title: config.name + " | All Posts",

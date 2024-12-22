@@ -1,11 +1,12 @@
 import { Typography } from "hazel-ui/Typography";
-import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
+import { MDXRemote } from "next-mdx-remote";
 
-import type { Post } from "../lib/posts.js";
-import { Date } from "../ui/Atoms/Date.js";
-import { Layout } from "../wrappers/Layout.js";
-import { config } from "../config.js";
+import { config } from "../config";
+import { DateDisplay } from "../ui/Atoms/DateDisplay";
+import { Layout } from "../wrappers/Layout";
+
+import type { Post } from "../lib/posts";
 
 export function PostContent({ frontMatter, mdxSource }: Post) {
   const page = {
@@ -49,7 +50,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
         </article>
 
         <Typography variant="label" sx={{ marginTop: "3rem" }}>
-          Last Updated - <Date dateString={frontMatter.date} />
+          Last Updated - <DateDisplay dateString={frontMatter.date} />
         </Typography>
       </Layout>
     </>

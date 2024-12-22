@@ -6,7 +6,6 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 - [ ] Migrate old blog
 - [ ] Add Edit on GitHub
-- [ ] Add "Discuss on Twitter"
 - [ ] Remove theme from tailwind config
 - [ ] Add a lib for remark/rehype syntax highlighting
 - [ ] Add prettier config
@@ -18,9 +17,9 @@ Code for my personal blog, hosted at [blog.absingh.com][1].
 
 ### Runtime software versions
 
-| Name | Version  |
-| ---- | -------- |
-| node | v16.14.2 |
-| npm  | 8.5.0    |
+| Name | Version |
+| ---- | ------- |
+| node | v22.9.0 |
+| npm  | 10.8.3  |
 
 [1]: https://blog.absingh.com/

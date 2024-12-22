@@ -1,15 +1,14 @@
+import type { JSX } from "react";
+import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
-import { Typography } from "hazel-ui/Typography";
 
-import type { LearnPost } from "../lib/learn.js";
-import { Layout } from "../wrappers/Layout.js";
-import { Date } from "../ui/Atoms/Date.js";
+import { DateDisplay } from "../ui/Atoms/DateDisplay";
+import { Layout } from "../wrappers/Layout";
 
-export function LearnContent({
-  frontMatter,
-  mdxSource,
-}: LearnPost): JSX.Element {
+import type { LearnPost } from "../lib/learn";
+
+export function LearnContent({ frontMatter, mdxSource }: LearnPost): JSX.Element {
   return (
     <>
       <Head>
@@ -21,11 +20,7 @@ export function LearnContent({
           <Typography variant="display">{frontMatter.title}</Typography>
 
           {frontMatter.cover ? (
-            <img
-              src={frontMatter.cover}
-              alt="Cover image"
-              style={{ marginTop: "1rem" }}
-            />
+            <img src={frontMatter.cover} alt="Cover image" style={{ marginTop: "1rem" }} />
           ) : null}
 
           <br />
@@ -36,7 +31,7 @@ export function LearnContent({
         </article>
 
         <Typography variant="label" sx={{ marginTop: "3rem" }}>
-          Last Updated - <Date dateString={frontMatter.date} />
+          Last Updated - <DateDisplay dateString={frontMatter.date} />
         </Typography>
       </Layout>
     </>
