@@ -42,9 +42,9 @@ export function Learn({ allLearnData }: LearnProps): JSX.Element {
           <Typography variant="display">Learn</Typography>
 
           <ul>
-            {allLearnData.map(({ mdxSource, ...learnData }) => (
-              <Link key={learnData.id} href={`/learn/${learnData.id}`}>
-                <TopicCard key={learnData.id} learnData={learnData} />
+            {allLearnData.map(({ id, frontMatter }) => (
+              <Link key={id} href={`/learn/${id}`}>
+                <TopicCard key={id} learnData={{ id, frontMatter }} />
               </Link>
             ))}
           </ul>

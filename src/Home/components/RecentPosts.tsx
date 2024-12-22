@@ -13,8 +13,8 @@ export function RecentPosts({ allPostsData }: PostsProps) {
       <Typography variant="headline" sx={{ textAlign: "center" }}>
         Recent Posts
       </Typography>
-      {allPostsData.slice(0, 3).map(({ mdxSource, ...postData }) => (
-        <PostListItem key={postData.id} postData={postData} />
+      {allPostsData.slice(0, 3).map(({ id, frontMatter }) => (
+        <PostListItem key={id} postData={{ id, frontMatter }} />
       ))}
     </section>
   );
