@@ -8,9 +8,7 @@ import "../src/styles/globals.css";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="dark bg-gradient-to-tr from-slate-1 to-blue-2">
-        {children}
-      </body>
+      <body className="dark bg-gradient-to-tr from-slate-1 to-blue-2">{children}</body>
     </html>
   );
 }

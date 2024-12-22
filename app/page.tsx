@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: pageMeta.title,
   description: pageMeta.description,
+  metadataBase: new URL(config.host),
 
   openGraph: {
     title: pageMeta.title,
@@ -24,9 +25,7 @@ export const metadata: Metadata = {
     site: pageMeta.twitter,
   },
 
-  icons: {
-    icon: `${config.basePath}/favicon.ico`,
-  },
+  icons: { icon: `${config.basePath}/favicon.ico` },
 };
 
 export default function Page() {
