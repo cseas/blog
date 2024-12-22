@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
-import { getSortedPostsData } from "../../src/lib/posts.js";
+import { getSortedPostsData } from "../../src/lib/posts";
 
-export { Posts as default } from "../../src/Posts/Posts.js";
+export { Posts as default } from "../../src/Posts/Posts";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();

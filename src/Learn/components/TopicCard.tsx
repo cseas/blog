@@ -1,6 +1,8 @@
 import type { LearnPost } from "../../lib/learn.js";
 import { Card, Typography } from "hazel-ui";
 
+import type { JSX } from "react";
+
 interface TopicCardProps {
   learnData: LearnPost;
 }

@@ -1,7 +1,7 @@
-import { Home } from "../src/Home/Home.js";
-import { pageMeta } from "../src/Home/meta.js";
-import { config } from "../src/config.js";
-import { getSortedPostsData } from "../src/lib/posts.js";
+import { Home } from "../src/Home/Home";
+import { pageMeta } from "../src/Home/meta";
+import { config } from "../src/config";
+import { getSortedPostsData } from "../src/lib/posts";
 
 import type { Metadata } from "next";
 

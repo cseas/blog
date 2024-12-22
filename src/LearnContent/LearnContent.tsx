@@ -2,14 +2,13 @@ import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
 import { Typography } from "hazel-ui/Typography";
 
-import type { LearnPost } from "../lib/learn.js";
-import { Layout } from "../wrappers/Layout.js";
-import { Date } from "../ui/Atoms/Date.js";
+import type { LearnPost } from "../lib/learn";
+import { Layout } from "../wrappers/Layout";
+import { Date } from "../ui/Atoms/Date";
 
-export function LearnContent({
-  frontMatter,
-  mdxSource,
-}: LearnPost): JSX.Element {
+import type { JSX } from "react";
+
+export function LearnContent({ frontMatter, mdxSource }: LearnPost): JSX.Element {
   return (
     <>
       <Head>
@@ -21,11 +20,7 @@ export function LearnContent({
           <Typography variant="display">{frontMatter.title}</Typography>
 
           {frontMatter.cover ? (
-            <img
-              src={frontMatter.cover}
-              alt="Cover image"
-              style={{ marginTop: "1rem" }}
-            />
+            <img src={frontMatter.cover} alt="Cover image" style={{ marginTop: "1rem" }} />
           ) : null}
 
           <br />

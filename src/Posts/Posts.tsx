@@ -6,6 +6,8 @@ import type { Post } from "../lib/posts";
 import { Layout } from "../wrappers";
 import { PostListItem } from "./components";
 
+import type { JSX } from "react";
+
 const page = {
   title: config.name + " | All Posts",
   description: config.description,

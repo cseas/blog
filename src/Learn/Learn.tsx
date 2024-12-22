@@ -2,11 +2,13 @@ import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 import Link from "next/link";
 
-import { config } from "../config.js";
-import { Layout } from "../wrappers/Layout.js";
-import { TopicCard } from "./components/TopicCard.js";
+import { config } from "../config";
+import { Layout } from "../wrappers/Layout";
+import { TopicCard } from "./components/TopicCard";
 
-import type { LearnPost } from "../lib/learn.js";
+import type { LearnPost } from "../lib/learn";
+
+import type { JSX } from "react";
 
 const page = {
   title: "Learn",

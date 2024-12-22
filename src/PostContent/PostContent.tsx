@@ -2,10 +2,10 @@ import { Typography } from "hazel-ui/Typography";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 
-import type { Post } from "../lib/posts.js";
-import { Date } from "../ui/Atoms/Date.js";
-import { Layout } from "../wrappers/Layout.js";
-import { config } from "../config.js";
+import type { Post } from "../lib/posts";
+import { Date } from "../ui/Atoms/Date";
+import { Layout } from "../wrappers/Layout";
+import { config } from "../config";
 
 export function PostContent({ frontMatter, mdxSource }: Post) {
   const page = {
