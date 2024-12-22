@@ -1,7 +1,7 @@
 import { Typography } from "hazel-ui/Typography";
 
-import { Post } from "../../lib";
 import { PostListItem } from "../../Posts/components";
+import { Post } from "../../lib";
 
 interface PostsProps {
   allPostsData: Array<Post>;

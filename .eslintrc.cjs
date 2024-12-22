@@ -17,16 +17,16 @@ module.exports = {
      * */
     "@next/next/no-img-element": "off",
 
-    // "import/order": [
-    //   "error",
-    //   {
-    //     groups: [["builtin", "external"], "internal", ["parent", "sibling"], "type"],
-    //     pathGroups: [{ group: "builtin", pattern: "react", position: "before" }],
-    //     pathGroupsExcludedImportTypes: ["builtin"],
-    //     distinctGroup: false,
-    //     "newlines-between": "always",
-    //     alphabetize: { order: "asc", caseInsensitive: false },
-    //   },
-    // ],
+    "import/order": [
+      "error",
+      {
+        groups: [["builtin", "external"], "internal", ["parent", "sibling"], "type"],
+        pathGroups: [{ group: "builtin", pattern: "react", position: "before" }],
+        pathGroupsExcludedImportTypes: ["builtin"],
+        distinctGroup: false,
+        "newlines-between": "always",
+        alphabetize: { order: "asc", caseInsensitive: false },
+      },
+    ],
   },
 };

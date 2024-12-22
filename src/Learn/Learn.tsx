@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 import Link from "next/link";
@@ -8,7 +9,6 @@ import { TopicCard } from "./components/TopicCard";
 
 import type { LearnPost } from "../lib/learn";
 
-import type { JSX } from "react";
 
 const page = {
   title: "Learn",

@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+
 import { getAllPostIds, getPostData } from "../../src/lib/posts";
 
 export { PostContent as default } from "../../src/PostContent/PostContent";

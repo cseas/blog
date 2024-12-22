@@ -1,12 +1,12 @@
+import type { JSX } from "react";
+import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
-import { Typography } from "hazel-ui/Typography";
+
+import { DateDisplay } from "../ui/Atoms/DateDisplay";
+import { Layout } from "../wrappers/Layout";
 
 import type { LearnPost } from "../lib/learn";
-import { Layout } from "../wrappers/Layout";
-import { DateDisplay } from "../ui/Atoms/DateDisplay";
-
-import type { JSX } from "react";
 
 export function LearnContent({ frontMatter, mdxSource }: LearnPost): JSX.Element {
   return (
