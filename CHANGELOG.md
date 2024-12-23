@@ -1,5 +1,30 @@
 # blog
 
+## 0.0.11
+
+### Patch Changes
+
+- [#41](https://github.com/cseas/blog/pull/41) [`4d9d4e6`](https://github.com/cseas/blog/commit/4d9d4e6e28bce10b4c2df44798a57d0998e59715) Thanks [@cseas](https://github.com/cseas)! - ci: migrate to pnpm
+
+  ## Summary by CodeRabbit
+
+  - **New Features**
+
+    - Introduced a new GitHub Actions workflow for validating source code during pull requests.
+    - Added a script for TypeScript type checking in the project.
+
+  - **Improvements**
+
+    - Updated workflows to streamline dependency installation and caching processes.
+    - Upgraded action versions for improved performance and compatibility.
+
+  - **Bug Fixes**
+
+    - Removed outdated entries from `.gitignore` and `README.md`, allowing for better tracking and clarity.
+
+  - **Chores**
+    - Enhanced configuration in `package.json` to enforce specific engine requirements for package management.
+
 ## 0.0.10
 
 ### Patch Changes
