@@ -50,7 +50,6 @@ jobs:
 
       - name: Changeset
         if: |
-          github.event.workflow_run.conclusion == 'success' &&
           github.event.pull_request.draft == false &&
           !(contains(github.event.pull_request.labels.*.name, 'changeset-not-applicable') ||
           contains(github.event.pull_request.labels.*.name, 'changeset-added'))
