@@ -56,5 +56,6 @@
     "pnpm": ">= 9.15.1",
     "yarn": "please-use-pnpm",
     "npm": "please-use-pnpm"
-  }
+  },
+  "packageManager": "pnpm@9.15.1"
 }
