@@ -3,6 +3,7 @@ description: Installs npm packages and manages it's cache
 
 env:
   NODE_VERSION: 22.9.0
+  PNPM_VERSION: 9.15.1
 
 runs:
   using: composite
@@ -11,7 +12,7 @@ runs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
-        version: 9
+        version: ${{ env.PNPM_VERSION }}
         run_install: false
 
     - name: Setup Node.js v${{ env.NODE_VERSION }} with pnpm cache
