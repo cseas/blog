@@ -1,6 +1,6 @@
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 
 import { config } from "../config";
 import { DateDisplay } from "../ui/Atoms/DateDisplay";
@@ -45,7 +45,7 @@ export function PostContent({ frontMatter, mdxSource }: Post) {
           <br />
 
           <div className="prose w-full max-w-none dark:prose-dark">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote {...(mdxSource as MDXRemoteSerializeResult)} />
           </div>
         </article>
 
