@@ -1,5 +1,5 @@
 name: Install npm packages
-description: Installs npm packages and manages it's cache
+description: Installs npm packages and manages its cache
 
 env:
   NODE_VERSION: 22.9.0
