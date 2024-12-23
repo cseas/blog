@@ -1,0 +1,53 @@
+name: Validate
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+env:
+  NODE_VERSION: 22.9.0
+
+jobs:
+  validate:
+    name: Validate Source Code
+    if: |
+      !((github.actor == 'github-actions[bot]' || contains(github.event.pull_request.title, 'ci: update version & changelog')) && github.head_ref == 'changeset-release/main')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Cache & Install Dependencies
+        uses: ./.github/actions/install-dependencies
+
+      - name: Print timezone for timezone based tests
+        run: date
+
+      - name: Lint Source Code
+        run: pnpm run lint
+
+      - name: Run TypeScript Checks
+        run: pnpm run typecheck
+
+      - name: Build
+        run: pnpm run build
+
+  # test:
+  #   name: Run Tests
+  #   if: |
+  #     !((github.actor == 'rzpcibot' || contains(github.event.pull_request.title, 'build(onboarding-sdk): update version')) && github.head_ref == 'changeset-release/master')
+  #   runs-on: self-hosted
+  #   steps:
+  #     - name: Checkout Codebase
+  #       uses: actions/checkout@v4
+  #     - name: Use Node v${{ env.NODE_VERSION }}
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: ${{ env.NODE_VERSION }}
+  #     - name: Setup Cache & Install Dependencies
+  #       uses: ./.github/actions/install-dependencies
+  #     - name: Run Unit Tests
+  #       run: pnpm test:coverage

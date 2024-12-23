@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { Typography } from "hazel-ui/Typography";
 import Head from "next/head";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
 
 import { DateDisplay } from "../ui/Atoms/DateDisplay";
 import { Layout } from "../wrappers/Layout";
@@ -26,7 +26,7 @@ export function LearnContent({ frontMatter, mdxSource }: LearnPost): JSX.Element
           <br />
 
           <div className="prose w-full max-w-none dark:prose-dark">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote {...(mdxSource as MDXRemoteSerializeResult)} />
           </div>
         </article>
 
