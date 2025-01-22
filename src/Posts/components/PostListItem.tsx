@@ -19,6 +19,8 @@ export function PostListItem({ postData }: PostListItemProps) {
           {frontMatter.title}
         </Typography>
 
+        <img src={frontMatter.cover} alt="cover" />
+
         {/* TODO: This is a use-case where we need the Typography styles 
         but we can't use the Typography component because it needs to render
         as a <time> element which has different props. Ideally the classNames
