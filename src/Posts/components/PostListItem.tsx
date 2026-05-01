@@ -20,7 +20,11 @@ export function PostListItem({ postData }: PostListItemProps) {
         </Typography>
 
         {frontMatter.cover ? (
-          <img src={frontMatter.cover} alt="" className="mt-4 max-h-48 w-full rounded-lg object-cover" />
+          <img
+            src={frontMatter.cover}
+            alt="Cover image for the article"
+            className="mt-4 max-h-48 w-full rounded-lg object-cover"
+          />
         ) : null}
 
         {/* TODO: This is a use-case where we need the Typography styles 
