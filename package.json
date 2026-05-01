@@ -12,7 +12,7 @@
     "change:add": "changeset add"
   },
   "dependencies": {
-    "next": "15.1.2",
+    "next": "15.5.10",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
@@ -29,12 +29,12 @@
     "@types/react-dom": "19.0.2",
     "autoprefixer": "10.4.13",
     "date-fns": "2.16.1",
-    "eslint-config-next": "15.1.2",
+    "eslint-config-next": "15.5.10",
     "eslint-plugin-unicorn": "56.0.1",
     "gray-matter": "4.0.2",
     "hazel-ui": "0.4.4",
     "husky": "8.0.2",
-    "next-mdx-remote": "5.0.0",
+    "next-mdx-remote": "6.0.0",
     "postcss": "8.4.20",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.2.1",

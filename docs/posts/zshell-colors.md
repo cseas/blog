@@ -1,36 +1,30 @@
 ---
-title: "[WIP] Make MacOS Terminal prompt look colorful like Ubuntu"
-date: "2023-03-30"
+title: "Make MacOS Terminal prompt look colorful like Ubuntu"
+date: "2026-05-02"
+cover: "/covers/terminal.avif"
 ---
 
-Switching from Ubuntu's colorful bash terminal to the bland monochrome z-shell of MacOS can be underwhelming. All that white makes it hard to distinguish one command run from the other one when you're firing dozens of commands in a day.
+Switching from Ubuntu's colorful bash terminal to the bland monochrome z-shell on MacOS can be underwhelming. All that white makes it hard to distinguish one command run from the other when you're firing dozens of commands in a day.
 
 Here's how to paint some colors on that terminal prompt to make it look similar to the bash terminal on Ubuntu.
 
-Create a `.zshrc` file with the following code in the Home directory of your system:
+Open (or create) `~/.zshrc` in your home directory and add the following line:
 
 ```bash
 PROMPT='%F{green}%n%f:%F{cyan}%2~%f$ '
 ```
 
-This will change your terminal prompt to look like the one in the screenshot below.
+Restart your terminal (or run `source ~/.zshrc`) and the prompt will turn into a green username, a cyan path, and a plain `$` to type after.
 
---- add screenshot
+Quick breakdown of what the snippet says:
 
---- draft after this point
+- `%F{green}...%f` switches the foreground color on, and `%f` switches it back off.
+- `%n` prints your username.
+- `%2~` prints the current directory, abbreviating `$HOME` to `~` and showing only the last 2 segments of the path.
 
-todo:
-
-- add correct screenshot
-- correct second link
-
-This will change the PowerShell prompt to look like the one shown in the screenshot below.
-
-![PowerShell](/images/posts/powershell-colors/powershell.png)
-
-You can modify the above code to change the colors and functionality as per your preference. The complete reference for the `PROMPT` config property is available in [Microsoft PowerShell Docs][2].
+You can mix and match these to taste: swap colors, add the hostname with `%m`, or show the full path with `%~`. The complete reference is in the [zsh prompt expansion docs][2].
 
 Have questions? [Discuss on Twitter][1]
 
 [1]: https://twitter.com/cse_as
-[2]: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-7.1#parameters
+[2]: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html

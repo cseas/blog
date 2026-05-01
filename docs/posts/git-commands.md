@@ -1,6 +1,7 @@
 ---
 title: "Git commands I use regularly as a Software Engineer"
-date: "2023-03-26"
+date: "2026-05-01"
+cover: "/covers/git.avif"
 ---
 
 There are possibly thousands of "Git cheatsheets" floating all over the internet. Those have never worked for me since you never need to remember 50 different commands to get everyday work done.

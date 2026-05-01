@@ -1,6 +1,7 @@
 ---
 title: "How to contribute to Mozilla"
-date: "2021-02-20"
+date: "2024-12-25"
+cover: "/covers/mozilla-hero.avif"
 ---
 
 As a [Mozilla Rep][1], I get this question often, specially from students.

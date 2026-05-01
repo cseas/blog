@@ -1,6 +1,7 @@
 ---
 title: "Don't install NodeJS from Snap Store on Ubuntu"
-date: "2023-03-26"
+date: "2026-05-01"
+cover: "/covers/ubuntu.webp"
 ---
 
 [Snap Store][4] is usually the easiest way of installing software on Ubuntu and the closest option available for someone looking for a [brew][1] alternative for Linux.

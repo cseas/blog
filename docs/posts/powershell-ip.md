@@ -1,6 +1,7 @@
 ---
 title: "How to get IP Address of a URL in Windows PowerShell"
-date: "2021-05-06"
+date: "2026-05-01"
+cover: "/covers/terminal.avif"
 ---
 
 Just run the below command in PowerShell.
