@@ -1,5 +1,11 @@
 # blog
 
+## 0.0.12
+
+### Patch Changes
+
+- [#44](https://github.com/cseas/blog/pull/44) [`ec3ef9f`](https://github.com/cseas/blog/commit/ec3ef9f0d2b4f4831e5775a6e9be35228b19049d) Thanks [@cseas](https://github.com/cseas)! - feat: add cover images to posts
+
 ## 0.0.11
 
 ### Patch Changes
