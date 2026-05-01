@@ -19,7 +19,9 @@ export function PostListItem({ postData }: PostListItemProps) {
           {frontMatter.title}
         </Typography>
 
-        <img src={frontMatter.cover} alt="cover" />
+        {frontMatter.cover ? (
+          <img src={frontMatter.cover} alt="" className="mt-4 max-h-48 w-full rounded-lg object-cover" />
+        ) : null}
 
         {/* TODO: This is a use-case where we need the Typography styles 
         but we can't use the Typography component because it needs to render

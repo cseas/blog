@@ -1,6 +1,7 @@
 ---
 title: "Make Windows PowerShell prompt look colorful like Ubuntu"
-date: "2021-05-02"
+date: "2026-05-01"
+cover: "/covers/terminal.avif"
 ---
 
 As someone who has enjoyed the bash terminal on Ubuntu for years as a student, transitioning to the bland looking PowerShell on Windows at work was a subpar experience for me. All that white makes it hard to distinguish one command run from the other one when you're firing dozens of commands in a day.
